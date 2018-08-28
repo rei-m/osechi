@@ -1,0 +1,52 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-react",
+    "tslint-plugin-prettier",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "class-name": true,
+    "comment-format": [true,
+      "check-space"
+    ],
+    "no-var-keyword": true,
+    "no-internal-module": true,
+    "no-inferrable-types": true,
+    "no-null-keyword": true,
+    "no-console": {
+      "options": [
+          "debug",
+          "info",
+          "log",
+          "time",
+          "timeEnd",
+          "trace"
+      ]
+    },
+    "prefer-const": true,
+    "no-implicit-dependencies": false,
+    "no-switch-case-fall-through": true,
+    "no-submodule-imports": false,
+    "triple-equals": true,
+    "jsdoc-format": true,
+    "interface-name": [true, "never-prefix"],
+    "object-literal-shorthand": false,
+    "ordered-imports": [
+      true, {
+        "import-sources-order": "any",
+        "named-imports-order": "lowercase-first"
+      }
+    ],
+    "no-empty-interface": false,
+    "variable-name": [true, "allow-leading-underscore", "allow-pascal-case"],
+    "jsx-wrap-multiline": false,
+    "jsx-boolean-value": false,
+    "jsx-no-multiline-js": false,
+    "prettier": [
+      true, {
+        "singleQuote": true
+      }
+    ]
+  }
+}
