@@ -7,15 +7,6 @@ import {
 } from 'react-router-dom';
 import * as ReactGA from 'react-ga';
 import { lifecycle } from 'recompose';
-// import Root from '@src/containers/Root';
-// import TrainignsIndex from '@src/containers/Trainings';
-// import ExamIndex from '@src/containers/Exam';
-// import ExamQuestionsIndex from '@src/containers/ExamQuestions';
-// import KarutasIndex from '@src/containers/Karutas';
-// import KarutasShow from '@src/containers/Karutas/Show';
-// import TrainingQuestionsIndex from '@src/containers/TrainingQuestions';
-// import MenuSection from '@src/components/MenuSection';
-// import AboutSection from '@src/components/AboutSection';
 import NotFound from '@src/components/NotFound';
 import ErrorBoundary from '@src/components/ErrorBoundary';
 import { ROUTE_PATHS } from '@src/constants';
