@@ -7,20 +7,20 @@ import {
 } from 'react-router-dom';
 import * as ReactGA from 'react-ga';
 import { lifecycle } from 'recompose';
+import Root from '@src/containers/Root';
 import NotFound from '@src/components/NotFound';
 import ErrorBoundary from '@src/components/ErrorBoundary';
+import Home from '@src/components/Home';
 import { ROUTE_PATHS } from '@src/constants';
-
-const temp = () => <div>unko</div>;
 
 const Application = (_props: RouteComponentProps<{}>) => (
   <ErrorBoundary>
-    <div>
+    <Root>
       <Switch>
-        <Route exact path={ROUTE_PATHS.ROOT} component={temp} />
+        <Route exact path={ROUTE_PATHS.ROOT} component={Home} />
         <Route component={NotFound} />
       </Switch>
-    </div>
+    </Root>
   </ErrorBoundary>
 );
 const Enhanced = lifecycle<RouteComponentProps<{}>, {}>({
