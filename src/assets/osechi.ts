@@ -1535,3 +1535,5 @@ export const KIBUN_LIST: Osechi[] = [
     price: 7500
   }
 ];
+
+export const OSECHI_LIST = [...OISIX_LIST, ...GURU_LIST, ...KIBUN_LIST];

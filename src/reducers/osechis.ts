@@ -1,15 +1,16 @@
-import { Osechi, Site } from '@src/types';
-import { GURU_LIST, KIBUN_LIST, OISIX_LIST } from '@src/assets/osechi';
-import { SITE_LIST } from '@src/assets/site';
+import { Category, CategoryCondition, Osechi } from '@src/types';
+import { OSECHI_LIST } from '@src/assets/osechi';
+
+export interface Form {
+  cateogry: CategoryCondition;
+}
 
 export interface OsechiState {
   readonly osechiList: Osechi[];
-  readonly siteList: Site[];
 }
 
 export const initialState: OsechiState = {
-  osechiList: [...OISIX_LIST, ...GURU_LIST, ...KIBUN_LIST],
-  siteList: SITE_LIST
+  osechiList: OSECHI_LIST
 };
 
 export const osechiReducer = (

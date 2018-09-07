@@ -19,3 +19,5 @@ export interface Site {
 }
 
 export type Category = '和' | '洋' | '中';
+
+export type CategoryCondition = '指定なし' | '和風' | '洋風' | '中華';

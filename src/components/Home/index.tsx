@@ -13,7 +13,7 @@ const Home: React.SFC<{}> = ({}) => {
       >
         バナー
       </div>
-      <div>ソート</div>
+      <div>フォーム</div>
       <div>和おせちリスト</div>
       <div>洋おせちリスト</div>
       <div>中おせちリスト</div>
