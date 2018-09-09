@@ -6,7 +6,7 @@ export interface OsechiProps {
 }
 
 const Osechi: React.SFC<OsechiProps> = ({ osechi }) => {
-  return <div>{osechi}</div>;
+  return <div>{osechi.code}</div>;
 };
 
 export default Osechi;

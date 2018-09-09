@@ -1,4 +1,5 @@
 import * as React from 'react';
+import RecommendOsechiList from '@src/containers/RecommendOsechiList';
 
 const Home: React.SFC<{}> = ({}) => {
   return (
@@ -14,9 +15,9 @@ const Home: React.SFC<{}> = ({}) => {
         バナー
       </div>
       <div>フォーム</div>
-      <div>和おせちリスト</div>
-      <div>洋おせちリスト</div>
-      <div>中おせちリスト</div>
+      <RecommendOsechiList category="和" />
+      <RecommendOsechiList category="洋" />
+      <RecommendOsechiList category="中" />
     </div>
   );
 };
