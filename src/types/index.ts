@@ -21,3 +21,35 @@ export interface Site {
 export type Category = '和' | '洋' | '中';
 
 export type CategoryCondition = '指定なし' | '和風' | '洋風' | '中華';
+
+export enum PeopleRangeCondition {
+  All,
+  OneToThree,
+  ThreeToFour,
+  FiveOver
+}
+
+export const PeopleRangeConditionList = [
+  PeopleRangeCondition.All,
+  PeopleRangeCondition.OneToThree,
+  PeopleRangeCondition.ThreeToFour,
+  PeopleRangeCondition.FiveOver
+];
+
+export enum PriceRangeCondition {
+  All,
+  Lower15,
+  Between15And20,
+  Between20And25,
+  Between25And30,
+  Over30
+}
+
+export const PriceRangeConditionList = [
+  PriceRangeCondition.All,
+  PriceRangeCondition.Lower15,
+  PriceRangeCondition.Between15And20,
+  PriceRangeCondition.Between20And25,
+  PriceRangeCondition.Between25And30,
+  PriceRangeCondition.Over30
+];

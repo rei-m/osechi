@@ -1,4 +1,9 @@
-import { CategoryCondition, Osechi } from '@src/types';
+import {
+  CategoryCondition,
+  Osechi,
+  PeopleRangeCondition,
+  PriceRangeCondition
+} from '@src/types';
 import { OSECHI_LIST } from '@src/assets/osechi';
 
 const osechiCollection: { [code: string]: Osechi } = OSECHI_LIST.reduce(
@@ -10,7 +15,9 @@ const osechiCollection: { [code: string]: Osechi } = OSECHI_LIST.reduce(
 );
 
 export interface Form {
-  cateogry: CategoryCondition;
+  cateogry: CategoryCondition; // カテゴリ
+  priceRange: PriceRangeCondition; // 価格帯
+  peopleRange: PeopleRangeCondition; // 利用人数
 }
 
 // 急ぎで作ってるのでめっちゃ適当
@@ -24,7 +31,9 @@ export const initialState: OsechiState = {
   osechiCollection,
   searchResult: [],
   searchForm: {
-    cateogry: '指定なし'
+    cateogry: '指定なし',
+    priceRange: PriceRangeCondition.All,
+    peopleRange: PeopleRangeCondition.All
   }
 };
 
