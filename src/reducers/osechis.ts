@@ -24,17 +24,11 @@ export interface Form {
 export interface OsechiState {
   readonly osechiCollection: { [key: string]: Osechi };
   readonly searchResult: Osechi[];
-  readonly searchForm: Form;
 }
 
 export const initialState: OsechiState = {
   osechiCollection,
-  searchResult: [],
-  searchForm: {
-    cateogry: '指定なし',
-    priceRange: PriceRangeCondition.All,
-    peopleRange: PeopleRangeCondition.All
-  }
+  searchResult: []
 };
 
 export const osechiReducer = (

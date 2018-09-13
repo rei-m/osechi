@@ -20,7 +20,16 @@ export interface Site {
 
 export type Category = '和' | '洋' | '中';
 
-export type CategoryCondition = '指定なし' | '和風' | '洋風' | '中華';
+export type CategoryCondition = 'all' | 'ja' | 'we' | 'ch';
+
+export const CategoryConditionList: CategoryCondition[] = [
+  'all',
+  'ja',
+  'we',
+  'ch'
+];
+
+export const CategoryConditionNameList = ['指定なし', '和風', '洋風', '中華'];
 
 export enum PeopleRangeCondition {
   All,
@@ -28,6 +37,13 @@ export enum PeopleRangeCondition {
   ThreeToFour,
   FiveOver
 }
+
+export const PeopleRangeConditionNameList = [
+  '指定なし',
+  '1名 〜 3名',
+  '3名 〜 4名',
+  '5名以上'
+];
 
 export const PeopleRangeConditionList = [
   PeopleRangeCondition.All,
@@ -44,6 +60,15 @@ export enum PriceRangeCondition {
   Between25And30,
   Over30
 }
+
+export const PriceRangeConditionNameList = [
+  '指定なし',
+  '15,000円以下',
+  '15,000円 〜 20,000円',
+  '20,000円 〜 25,000円',
+  '25,000円 〜 30,000円',
+  '30,000円以上'
+];
 
 export const PriceRangeConditionList = [
   PriceRangeCondition.All,

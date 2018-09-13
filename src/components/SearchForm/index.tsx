@@ -4,11 +4,16 @@ import { withFormik, Form, FormikHandlers, FormikState } from 'formik';
 import { withAppTheme } from '@src/styles';
 import {
   CategoryCondition,
+  CategoryConditionList,
+  CategoryConditionNameList,
   PeopleRangeCondition,
   PeopleRangeConditionList,
+  PeopleRangeConditionNameList,
   PriceRangeCondition,
-  PriceRangeConditionList
+  PriceRangeConditionList,
+  PriceRangeConditionNameList
 } from '@src/types';
+import SelectItem from './SelectItem';
 
 const StartButton = withAppTheme(styled.button)`
   margin-top: ${({ theme }) => theme.spacing4x};
@@ -29,8 +34,32 @@ export interface SearchFormValues {
 
 export type SearchFormProps = FormikState<SearchFormValues> & FormikHandlers;
 
-const SearchForm = (_props: SearchFormProps) => (
+const SearchForm = ({ values, handleChange }: SearchFormProps) => (
   <Form>
+    <SelectItem
+      title="おせちのジャンル"
+      name="category"
+      value={values.category}
+      valueList={CategoryConditionList}
+      nameList={CategoryConditionNameList}
+      handleChange={handleChange}
+    />
+    <SelectItem
+      title="ご利用人数"
+      name="peopleRange"
+      value={values.peopleRange}
+      valueList={PeopleRangeConditionList}
+      nameList={PeopleRangeConditionNameList}
+      handleChange={handleChange}
+    />
+    <SelectItem
+      title="お値段"
+      name="priceRange"
+      value={values.priceRange}
+      valueList={PriceRangeConditionList}
+      nameList={PriceRangeConditionNameList}
+      handleChange={handleChange}
+    />
     <StartButton
       type="submit"
       className="pt-button pt-intent-primary pt-large pt-icon-edit"

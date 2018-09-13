@@ -1,10 +1,17 @@
 import * as React from 'react';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 import RecommendOsechiList from '@src/containers/RecommendOsechiList';
 import SearchForm from '@src/components/SearchForm';
 import { PeopleRangeCondition, PriceRangeCondition } from '@src/types';
 
-const Home: React.SFC<{}> = ({}) => {
-  const hoge = () => {
+const Home: React.SFC<RouteComponentProps<{}>> = ({ history }) => {
+  const onSubmitHundler = (category, peopleRange, priceRange) => {
+    const params = [
+      `ca=${category}`,
+      `ppr=${peopleRange}`,
+      `prr=${priceRange}`
+    ];
+    history.push(`/search?${params.join('&')}`);
     return;
   };
 
@@ -21,10 +28,10 @@ const Home: React.SFC<{}> = ({}) => {
         バナー
       </div>
       <SearchForm
-        initialCategory={'指定なし'}
+        initialCategory={'all'}
         initialPeopleRange={PeopleRangeCondition.All}
         initialPriceRange={PriceRangeCondition.All}
-        handleSubmit={hoge}
+        handleSubmit={onSubmitHundler}
       />
       <RecommendOsechiList category="和" />
       <RecommendOsechiList category="洋" />
@@ -33,4 +40,4 @@ const Home: React.SFC<{}> = ({}) => {
   );
 };
 
-export default Home;
+export default withRouter(Home);
