@@ -5,6 +5,7 @@ import {
   PriceRangeCondition
 } from '@src/types';
 import { OSECHI_LIST } from '@src/assets/osechi';
+import { OsechiActions, SEARCH_OSECHI_NAME } from '@src/actions/osechi';
 
 const osechiCollection: { [code: string]: Osechi } = OSECHI_LIST.reduce(
   (previous, current) => ({
@@ -24,16 +25,35 @@ export interface Form {
 export interface OsechiState {
   readonly osechiCollection: { [key: string]: Osechi };
   readonly searchResult: Osechi[];
+  readonly form: Form;
 }
 
 export const initialState: OsechiState = {
   osechiCollection,
-  searchResult: []
+  searchResult: [],
+  form: {
+    cateogry: 'all',
+    priceRange: PriceRangeCondition.All,
+    peopleRange: PeopleRangeCondition.All
+  }
 };
 
 export const osechiReducer = (
   state = initialState,
-  _action: any
+  action: OsechiActions
 ): OsechiState => {
-  return state;
+  switch (action.type) {
+    case SEARCH_OSECHI_NAME:
+      return {
+        ...state,
+        searchResult: action.payload.osechiList,
+        form: {
+          cateogry: action.meta.category,
+          peopleRange: action.meta.peopleRange,
+          priceRange: action.meta.priceRange
+        }
+      };
+    default:
+      return state;
+  }
 };

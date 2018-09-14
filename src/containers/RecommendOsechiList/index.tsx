@@ -9,12 +9,12 @@ export type RecommendOsechiListOwnProps = RouteComponentProps<{}> & {
   category: Category;
 };
 
-export interface RecommendOsechiListPropsConnectedProps {
+export interface RecommendOsechiListConnectedProps {
   osechiList: Osechi[];
 }
 
 export type RecommendOsechiListProps = RecommendOsechiListOwnProps &
-  RecommendOsechiListPropsConnectedProps;
+  RecommendOsechiListConnectedProps;
 
 const mapStateToProps = (
   { osechiState }: GlobalState,
@@ -36,7 +36,6 @@ const mapStateToProps = (
       );
       break;
     }
-
     case '中': {
       osechiList.push(osechiState.osechiCollection['1_takasagocn']);
       osechiList.push(osechiState.osechiCollection['2_kiyouken_g201925000']);

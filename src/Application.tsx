@@ -8,6 +8,7 @@ import {
 import * as ReactGA from 'react-ga';
 import { lifecycle } from 'recompose';
 import Root from '@src/containers/Root';
+import Search from '@src/containers/Search';
 import NotFound from '@src/components/NotFound';
 import ErrorBoundary from '@src/components/ErrorBoundary';
 import Home from '@src/components/Home';
@@ -18,6 +19,7 @@ const Application = (_props: RouteComponentProps<{}>) => (
     <Root>
       <Switch>
         <Route exact path={ROUTE_PATHS.ROOT} component={Home} />
+        <Route path={ROUTE_PATHS.SEARCH} component={Search} />
         <Route component={NotFound} />
       </Switch>
     </Root>

@@ -5,5 +5,6 @@ export const ROUTE_PATHS = {
   ROOT: '/',
   JAPANESE: '/japanese',
   CHINESE: '/chinese',
-  WESTERN: '/western'
+  WESTERN: '/western',
+  SEARCH: '/search'
 };
