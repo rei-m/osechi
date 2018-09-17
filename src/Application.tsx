@@ -11,7 +11,7 @@ import Root from '@src/containers/Root';
 import Search from '@src/containers/Search';
 import NotFound from '@src/components/NotFound';
 import ErrorBoundary from '@src/components/ErrorBoundary';
-import Home from '@src/components/Home';
+import Home from '@src/containers/Home';
 import { ROUTE_PATHS } from '@src/constants';
 
 const Application = (_props: RouteComponentProps<{}>) => (
