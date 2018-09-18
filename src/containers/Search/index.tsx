@@ -1,61 +1,12 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
-import { ThunkDispatch } from 'redux-thunk';
-import { lifecycle } from 'recompose';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import OsechiView from '@src/components/Osechi';
-import { GlobalState } from '@src/reducers';
 import { Osechi } from '@src/types';
-import { searchOsechi } from '@src/actions/osechi';
+import { osechiStore } from '@src/store/osechiStore';
 
-export type SearchOwnProps = RouteComponentProps<{}>;
-
-export interface SearchConnectedProps {
+export interface SearchProps {
   osechiList: Osechi[];
 }
-
-export interface SearchDispatchProps {
-  onStart: () => void;
-}
-
-export type SearchProps = SearchOwnProps &
-  SearchConnectedProps &
-  SearchDispatchProps;
-
-const mapStateToProps = (
-  { osechiState }: GlobalState,
-  props: SearchOwnProps
-): SearchOwnProps & SearchConnectedProps => {
-  return {
-    ...props,
-    osechiList: osechiState.searchResult
-  };
-};
-
-const mapDispatchToProps = (
-  dispatch: ThunkDispatch<GlobalState, {}, any>,
-  props: SearchOwnProps
-): SearchDispatchProps => ({
-  onStart: () => {
-    const query = props.location.search.substr(1);
-    const params = query.split('&');
-    if (params.length === 3) {
-      const paramMap: { [key: string]: string | undefined } = {};
-      params.forEach(param => {
-        const kv = param.split('=');
-        if (kv.length === 2) {
-          paramMap[kv[0]] = kv[1];
-        }
-      });
-      const category = paramMap.ca;
-      const peopleRange = paramMap.ppr;
-      const priceRange = paramMap.prr;
-      if (category && peopleRange && priceRange) {
-        dispatch(searchOsechi(category, peopleRange, priceRange));
-      }
-    }
-  }
-});
 
 const Search: React.SFC<SearchProps> = ({ osechiList }) => {
   return (
@@ -67,15 +18,26 @@ const Search: React.SFC<SearchProps> = ({ osechiList }) => {
   );
 };
 
-const Enhanced = lifecycle<SearchProps, {}>({
-  componentDidMount() {
-    this.props.onStart();
+const WrappedSearch: React.SFC<RouteComponentProps<{}>> = ({ location }) => {
+  const query = location.search.substr(1);
+  const params = query.split('&');
+  if (params.length === 3) {
+    const paramMap: { [key: string]: string | undefined } = {};
+    params.forEach(param => {
+      const kv = param.split('=');
+      if (kv.length === 2) {
+        paramMap[kv[0]] = kv[1];
+      }
+    });
+    const category = paramMap.ca;
+    const peopleRange = paramMap.ppr;
+    const priceRange = paramMap.prr;
+    if (category && peopleRange && priceRange) {
+      const osechiList = osechiStore.where(category, peopleRange, priceRange);
+      return <Search osechiList={osechiList} />;
+    }
   }
-})(Search);
+  return <div>unko</div>;
+};
 
-export default withRouter(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Enhanced)
-);
+export default withRouter(WrappedSearch);
