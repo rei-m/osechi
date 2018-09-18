@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import RecommendOsechiList from '@src/containers/RecommendOsechiList';
 import SearchForm from '@src/components/SearchForm';
@@ -8,25 +7,26 @@ import {
   PeopleRangeCondition,
   PriceRangeCondition
 } from '@src/types';
-import { GlobalState } from '@src/reducers';
 
-export type HomeOwnProps = RouteComponentProps<{}>;
+export type HomeProps = RouteComponentProps<{}>;
 
-export interface HomeConnectedProps {
-  initialCategory: CategoryCondition;
-  initialPeopleRange: PeopleRangeCondition;
-  initialPriceRange: PriceRangeCondition;
+export interface ConditionHolder {
+  category: CategoryCondition;
+  priceRange: PriceRangeCondition;
+  peopleRange: PeopleRangeCondition;
 }
 
-export type HomeProps = HomeOwnProps & HomeConnectedProps;
+const conditionHolder: ConditionHolder = {
+  category: 'all',
+  priceRange: PriceRangeCondition.All,
+  peopleRange: PeopleRangeCondition.All
+};
 
-export const Home: React.SFC<HomeProps> = ({
-  history,
-  initialCategory,
-  initialPeopleRange,
-  initialPriceRange
-}) => {
+export const Home: React.SFC<HomeProps> = ({ history }) => {
   const onSubmitHundler = (category, peopleRange, priceRange) => {
+    conditionHolder.category = category;
+    conditionHolder.priceRange = priceRange;
+    conditionHolder.peopleRange = peopleRange;
     const params = [
       `ca=${category}`,
       `ppr=${peopleRange}`,
@@ -49,9 +49,9 @@ export const Home: React.SFC<HomeProps> = ({
         バナー
       </div>
       <SearchForm
-        initialCategory={initialCategory}
-        initialPeopleRange={initialPeopleRange}
-        initialPriceRange={initialPriceRange}
+        initialCategory={conditionHolder.category}
+        initialPeopleRange={conditionHolder.peopleRange}
+        initialPriceRange={conditionHolder.priceRange}
         handleSubmit={onSubmitHundler}
       />
       <RecommendOsechiList category="和" />
@@ -61,14 +61,4 @@ export const Home: React.SFC<HomeProps> = ({
   );
 };
 
-const mapStateToProps = (
-  { osechiState }: GlobalState,
-  props: HomeOwnProps
-): HomeOwnProps & HomeConnectedProps => ({
-  ...props,
-  initialCategory: osechiState.form.cateogry,
-  initialPeopleRange: osechiState.form.peopleRange,
-  initialPriceRange: osechiState.form.priceRange
-});
-
-export default withRouter(connect(mapStateToProps)(Home));
+export default withRouter(Home);

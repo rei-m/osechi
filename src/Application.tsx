@@ -25,6 +25,7 @@ const Application = (_props: RouteComponentProps<{}>) => (
     </Root>
   </ErrorBoundary>
 );
+
 const Enhanced = lifecycle<RouteComponentProps<{}>, {}>({
   componentDidUpdate(prevProps: RouteComponentProps<{}>) {
     if (this.props.location.pathname !== prevProps.location.pathname) {
