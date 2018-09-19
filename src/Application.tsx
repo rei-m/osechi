@@ -19,7 +19,7 @@ const Application = (_props: RouteComponentProps<{}>) => (
     <Root>
       <Switch>
         <Route exact path={ROUTE_PATHS.ROOT} component={Home} />
-        <Route path={ROUTE_PATHS.SEARCH} component={Search} />
+        <Route path={ROUTE_PATHS.CATEGORY} component={Search} />
         <Route component={NotFound} />
       </Switch>
     </Root>

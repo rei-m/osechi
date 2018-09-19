@@ -1,7 +1,12 @@
 import * as React from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import OsechiView from '@src/components/Osechi';
-import { Osechi } from '@src/types';
+import {
+  CategoryConditionList,
+  Osechi,
+  PeopleRangeConditionList,
+  PriceRangeConditionList
+} from '@src/types';
 import { osechiStore } from '@src/store/osechiStore';
 
 export interface SearchProps {
@@ -18,25 +23,30 @@ const Search: React.SFC<SearchProps> = ({ osechiList }) => {
   );
 };
 
-const WrappedSearch: React.SFC<RouteComponentProps<{}>> = ({ location }) => {
-  const query = location.search.substr(1);
-  const params = query.split('&');
-  if (params.length === 3) {
-    const paramMap: { [key: string]: string | undefined } = {};
-    params.forEach(param => {
-      const kv = param.split('=');
-      if (kv.length === 2) {
-        paramMap[kv[0]] = kv[1];
-      }
-    });
-    const category = paramMap.ca;
-    const peopleRange = paramMap.ppr;
-    const priceRange = paramMap.prr;
-    if (category && peopleRange && priceRange) {
-      const osechiList = osechiStore.where(category, peopleRange, priceRange);
-      return <Search osechiList={osechiList} />;
-    }
+export interface SearchParam {
+  category: string;
+  peopleRange: string;
+  priceRange: string;
+}
+
+const WrappedSearch: React.SFC<RouteComponentProps<SearchParam>> = ({
+  match
+}) => {
+  const category = CategoryConditionList.find(
+    ca => ca === match.params.category
+  );
+  const peopleRange = PeopleRangeConditionList.find(
+    po => po === match.params.peopleRange
+  );
+  const priceRange = PriceRangeConditionList.find(
+    po => po === match.params.priceRange
+  );
+
+  if (category && peopleRange && priceRange) {
+    const osechiList = osechiStore.where(category, peopleRange, priceRange);
+    return <Search osechiList={osechiList} />;
   }
+
   return <div>unko</div>;
 };
 

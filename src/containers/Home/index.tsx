@@ -27,12 +27,7 @@ export const Home: React.SFC<HomeProps> = ({ history }) => {
     conditionHolder.category = category;
     conditionHolder.priceRange = priceRange;
     conditionHolder.peopleRange = peopleRange;
-    const params = [
-      `ca=${category}`,
-      `ppr=${peopleRange}`,
-      `prr=${priceRange}`
-    ];
-    history.push(`/search?${params.join('&')}`);
+    history.push(`/categories/${category}/${peopleRange}/${priceRange}`);
     return;
   };
 

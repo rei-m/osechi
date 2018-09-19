@@ -84,8 +84,8 @@ const EnhanceSearchForm = withFormik({
   handleSubmit: (values, { props }) => {
     props.handleSubmit(
       values.category,
-      PeopleRangeConditionList[Number(values.peopleRange)],
-      PriceRangeConditionList[Number(values.priceRange)]
+      values.peopleRange as PeopleRangeCondition,
+      values.priceRange as PriceRangeCondition
     );
   },
   mapPropsToValues: (props: EnhanceSearchFormProps) => ({

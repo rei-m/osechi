@@ -32,10 +32,10 @@ export const CategoryConditionList: CategoryCondition[] = [
 export const CategoryConditionNameList = ['指定なし', '和風', '洋風', '中華'];
 
 export enum PeopleRangeCondition {
-  All,
-  OneToThree,
-  ThreeToFour,
-  FiveOver
+  All = 'pe0',
+  OneToThree = 'pe1',
+  ThreeToFour = 'pe2',
+  FiveOver = 'pe3'
 }
 
 export const PeopleRangeConditionNameList = [
@@ -53,12 +53,12 @@ export const PeopleRangeConditionList = [
 ];
 
 export enum PriceRangeCondition {
-  All,
-  Lower15,
-  Between15And20,
-  Between20And25,
-  Between25And30,
-  Over30
+  All = 'pr0',
+  Lower15 = 'pr1',
+  Between15And20 = 'pr2',
+  Between20And25 = 'pr3',
+  Between25And30 = 'pr4',
+  Over30 = 'pr5'
 }
 
 export const PriceRangeConditionNameList = [

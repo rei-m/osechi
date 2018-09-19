@@ -6,6 +6,7 @@ import { MenuType } from '@src/enums';
 import { ROUTE_PATHS } from '@src/constants';
 import { withRipple } from '@src/enhancers/withRipple';
 import NavIcon from '@src/components/NavIcon';
+import { PeopleRangeCondition, PriceRangeCondition } from '@src/types';
 
 export interface NavigationProps {
   readonly currentMenuType?: MenuType;
@@ -55,7 +56,9 @@ const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
     </IconBox>
     <IconBox>
       <LinkWithRipple
-        to={ROUTE_PATHS.JAPANESE}
+        to={`/categories/ja/${PeopleRangeCondition.All}/${
+          PriceRangeCondition.All
+        }`}
         style={{ width: '100%', height: '100%' }}
       >
         <NavIcon
@@ -67,7 +70,9 @@ const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
     </IconBox>
     <IconBox>
       <LinkWithRipple
-        to={ROUTE_PATHS.WESTERN}
+        to={`/categories/we/${PeopleRangeCondition.All}/${
+          PriceRangeCondition.All
+        }`}
         style={{ width: '100%', height: '100%' }}
       >
         <NavIcon
@@ -79,7 +84,9 @@ const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
     </IconBox>
     <IconBox>
       <LinkWithRipple
-        to={ROUTE_PATHS.CHINESE}
+        to={`/categories/ch/${PeopleRangeCondition.All}/${
+          PriceRangeCondition.All
+        }`}
         style={{ width: '100%', height: '100%' }}
       >
         <NavIcon
