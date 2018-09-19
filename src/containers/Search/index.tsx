@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
+import styled from 'styled-components';
 import OsechiView from '@src/components/Osechi';
 import {
   CategoryConditionList,
@@ -13,13 +14,21 @@ export interface SearchProps {
   osechiList: Osechi[];
 }
 
+const Root = styled.article`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
 const Search: React.SFC<SearchProps> = ({ osechiList }) => {
   return (
-    <div>
-      {osechiList.map(osechi => (
-        <OsechiView osechi={osechi} key={osechi.code} />
+    <Root>
+      {osechiList.map((osechi, i) => (
+        <div key={osechi.code}>
+          <OsechiView osechi={osechi} no={i + 1} />
+        </div>
       ))}
-    </div>
+    </Root>
   );
 };
 

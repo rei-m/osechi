@@ -20,8 +20,8 @@ const RecommendOsechiList: React.SFC<RecommendOsechiListConnectedProps> = ({
 }) => {
   return (
     <div>
-      {osechiList.map(osechi => (
-        <OsechiView osechi={osechi} key={osechi.code} />
+      {osechiList.map((osechi, i) => (
+        <OsechiView osechi={osechi} no={i + 1} key={osechi.code} />
       ))}
     </div>
   );
