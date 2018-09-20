@@ -78,7 +78,7 @@ export const osechiStore = {
     category: string,
     peopleRange: string,
     priceRange: string,
-    sort = SortCondition.PriceLow
+    sort: SortCondition
   ) => {
     const filter = filterCreator(category, peopleRange, priceRange);
     return OSECHI_LIST.filter(osechi => filter(osechi)).sort(
