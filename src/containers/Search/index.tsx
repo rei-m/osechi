@@ -5,7 +5,10 @@ import OsechiView from '@src/components/Osechi';
 import {
   CategoryConditionList,
   Osechi,
+  PeopleRangeCondition,
   PeopleRangeConditionList,
+  PeopleRangeConditionNameList,
+  PriceRangeCondition,
   PriceRangeConditionList,
   SortCondition,
   SortConditionList,
@@ -15,7 +18,9 @@ import { osechiStore } from '@src/store/osechiStore';
 
 export interface SearchProps {
   osechiList: Osechi[];
+  peopleRange: PeopleRangeCondition;
   sort: SortCondition;
+  onChangePeopleRange: (peopleRange: PeopleRangeCondition) => void;
   onChangeSort: (sort: SortCondition) => void;
 }
 
@@ -49,9 +54,38 @@ const SortLink: React.SFC<
   );
 };
 
-const Search: React.SFC<SearchProps> = ({ osechiList, sort, onChangeSort }) => {
+const Search: React.SFC<SearchProps> = ({
+  osechiList,
+  peopleRange,
+  sort,
+  onChangePeopleRange,
+  onChangeSort
+}) => {
+  const onChangePeopleRangeHandler = (
+    e: React.SyntheticEvent<HTMLSelectElement>
+  ) => {
+    const value = e.currentTarget.value;
+    onChangePeopleRange(value as PeopleRangeCondition);
+  };
+
   return (
     <Root>
+      <div>
+        <select
+          name="peopleRange"
+          id="peopleRange"
+          value={peopleRange}
+          onChange={onChangePeopleRangeHandler}
+        >
+          {PeopleRangeConditionList.map((pr, i) => {
+            return (
+              <option value={pr} key={pr}>
+                {PeopleRangeConditionNameList[i]}
+              </option>
+            );
+          })}
+        </select>
+      </div>
       <div>
         <SortLink
           sort={SortCondition.PriceLow}
@@ -115,10 +149,15 @@ class WrappedSearch extends React.Component<
         priceRange,
         this.state.sort
       );
+
+      console.dir(this.onChangePriceRange);
+
       return (
         <Search
           osechiList={osechiList}
+          peopleRange={peopleRange}
           sort={this.state.sort}
+          onChangePeopleRange={this.onChangePeopleRange}
           onChangeSort={this.onChangeSort}
         />
       );
@@ -126,6 +165,20 @@ class WrappedSearch extends React.Component<
 
     return <div>unko</div>;
   }
+
+  private onChangePeopleRange = (peopleRange: PeopleRangeCondition) => {
+    const { params } = this.props.match;
+    this.props.history.push(
+      `/categories/${params.category}/${peopleRange}/${params.priceRange}`
+    );
+  };
+
+  private onChangePriceRange = (priceRange: PriceRangeCondition) => {
+    const { params } = this.props.match;
+    this.props.history.push(
+      `/categories/${params.category}/${params.peopleRange}/${priceRange}`
+    );
+  };
 
   private onChangeSort = (sort: SortCondition) => {
     this.setState({ sort });
