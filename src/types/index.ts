@@ -78,3 +78,15 @@ export const PriceRangeConditionList = [
   PriceRangeCondition.Between25And30,
   PriceRangeCondition.Over30
 ];
+
+export enum SortCondition {
+  PriceLow = 'pl',
+  PriceHigh = 'ph'
+}
+
+export const SortConditionNameList = ['値段の安い順', '値段の高い順'];
+
+export const SortConditionList = [
+  SortCondition.PriceLow,
+  SortCondition.PriceHigh
+];

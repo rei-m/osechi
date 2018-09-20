@@ -1,5 +1,5 @@
 import { OSECHI_LIST } from '@src/assets/osechi';
-import { Category, Osechi } from '@src/types';
+import { Category, Osechi, SortCondition } from '@src/types';
 
 const osechiCollection: { [code: string]: Osechi } = OSECHI_LIST.reduce(
   (previous, current) => ({
@@ -52,10 +52,37 @@ const filterCreator = (
     priceRangeFilter(price);
 };
 
+const priceLowComparator = (thisO: Osechi, thatO) => {
+  if (thisO.price > thatO.price) {
+    return 1;
+  }
+  if (thisO.price < thatO.price) {
+    return -1;
+  }
+  return 0;
+};
+
+const priceHighComparator = (thisO: Osechi, thatO) => {
+  if (thisO.price > thatO.price) {
+    return -1;
+  }
+  if (thisO.price < thatO.price) {
+    return 1;
+  }
+  return 0;
+};
+
 export const osechiStore = {
   findByCode: (code: string) => osechiCollection[code],
-  where: (category: string, peopleRange: string, priceRange: string) => {
+  where: (
+    category: string,
+    peopleRange: string,
+    priceRange: string,
+    sort = SortCondition.PriceLow
+  ) => {
     const filter = filterCreator(category, peopleRange, priceRange);
-    return OSECHI_LIST.filter(osechi => filter(osechi));
+    return OSECHI_LIST.filter(osechi => filter(osechi)).sort(
+      sort === SortCondition.PriceLow ? priceLowComparator : priceHighComparator
+    );
   }
 };
