@@ -127,11 +127,15 @@ const Search: React.SFC<SearchProps> = ({
         />
       </div>
       <OsechiList>
-        {osechiList.map((osechi, i) => (
-          <div key={osechi.code}>
-            <OsechiView osechi={osechi} no={i + 1} />
-          </div>
-        ))}
+        {osechiList.length > 0 ? (
+          osechiList.map((osechi, i) => (
+            <div key={osechi.code}>
+              <OsechiView osechi={osechi} no={i + 1} />
+            </div>
+          ))
+        ) : (
+          <div>空だよ</div>
+        )}
       </OsechiList>
     </Root>
   );
@@ -191,7 +195,7 @@ class WrappedSearch extends React.Component<
       );
     }
 
-    return <div>unko</div>;
+    return <div>検索条件が誤っています。前の画面からやり直してください。</div>;
   }
 
   private onChangePeopleRange = (peopleRange: PeopleRangeCondition) => {

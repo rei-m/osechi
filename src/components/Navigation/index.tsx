@@ -49,7 +49,7 @@ const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
       >
         <NavIcon
           iconType={MenuType.All}
-          text="練習"
+          text="全"
           isCurrent={currentMenuType === MenuType.All}
         />
       </LinkWithRipple>
@@ -63,7 +63,7 @@ const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
       >
         <NavIcon
           iconType={MenuType.Japanese}
-          text="腕試し"
+          text="和風"
           isCurrent={currentMenuType === MenuType.Japanese}
         />
       </LinkWithRipple>
@@ -77,7 +77,7 @@ const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
       >
         <NavIcon
           iconType={MenuType.Western}
-          text="資料"
+          text="洋風"
           isCurrent={currentMenuType === MenuType.Western}
         />
       </LinkWithRipple>
@@ -91,7 +91,7 @@ const Navigation: React.SFC<NavigationProps> = ({ currentMenuType }) => (
       >
         <NavIcon
           iconType={MenuType.Chinese}
-          text="その他"
+          text="中華"
           isCurrent={currentMenuType === MenuType.Chinese}
         />
       </LinkWithRipple>

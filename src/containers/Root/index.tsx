@@ -1,42 +1,37 @@
-import { connect } from 'react-redux';
+import * as React from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
-import { ThunkDispatch } from 'redux-thunk';
-// import { ThunkExtra } from '@src/store';
 // import { ROUTE_PATHS } from '@src/constants';
 import { MenuType } from '@src/enums';
-import { GlobalState } from '@src/reducers';
-// import { KarutaActions } from '@src/actions/karutas';
-// import Initializer from '@src/containers/Initializer';
-import Frame, { FrameProps } from '@src/components/Frame';
+import Frame from '@src/components/Frame';
 
-export type RootOwnProps = RouteComponentProps<{}>;
+export type RootProps = RouteComponentProps<{}>;
 
-export type RootConnectedProps = Omit<FrameProps, 'onClickBack'> & {
-  readonly initialized: boolean;
-};
-
-export type RootDispatchProps = Pick<FrameProps, 'onClickBack'>;
-
-export type RootProps = RootOwnProps & RootConnectedProps & RootDispatchProps;
-
-const mapStateToProps = (
-  {  }: GlobalState,
-  { location }: RootOwnProps
-): RootConnectedProps => {
-  // if (karutasState.error) {
-  //   throw karutasState.error;
-  // }
-
+const Root: React.SFC<RootProps> = ({ location, children }) => {
   console.dir(location);
 
-  let canBack = false;
+  const canBack = false;
   const isDisplayNav = true;
   const subTitle = '';
   const description =
     '百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。';
   const currentMenuType: MenuType = MenuType.All;
 
-  // const { pathname } = location;
+  const onClickBack = () => {
+    const { pathname } = location;
+    console.dir(pathname);
+    console.dir(history);
+    // switch (pathname) {
+    //   case ROUTE_PATHS.TRAINING:
+    //   case ROUTE_PATHS.EXAM:
+    //   case ROUTE_PATHS.KARUTAS:
+    //   case ROUTE_PATHS.ABOUT:
+    //     history.replace(ROUTE_PATHS.ROOT);
+    //     break;
+    //   default:
+    //     history.goBack();
+    //     break;
+    // }
+  };
 
   // if (pathname.indexOf(ROUTE_PATHS.TRAINING) >= 0) {
   //   canBack = true;
@@ -68,45 +63,20 @@ const mapStateToProps = (
   //   subTitle = 'サイトについて';
   //   currentMenuType = MenuType.Other;
   // } else {
-  canBack = false;
   // currentMenuType = undefined;
   // }
 
-  return {
-    canBack,
-    currentMenuType,
-    description,
-    initialized: true,
-    isDisplayNav,
-    subTitle
-  };
+  return (
+    <Frame
+      canBack={canBack}
+      children={children}
+      subTitle={subTitle}
+      description={description}
+      isDisplayNav={isDisplayNav}
+      currentMenuType={currentMenuType}
+      onClickBack={onClickBack}
+    />
+  );
 };
 
-const mapDispatchToProps = (
-  _dispatch: ThunkDispatch<GlobalState, {}, any>,
-  { history, location }: RootOwnProps
-): RootDispatchProps => ({
-  onClickBack: () => {
-    const { pathname } = location;
-    console.dir(pathname);
-    console.dir(history);
-    // switch (pathname) {
-    //   case ROUTE_PATHS.TRAINING:
-    //   case ROUTE_PATHS.EXAM:
-    //   case ROUTE_PATHS.KARUTAS:
-    //   case ROUTE_PATHS.ABOUT:
-    //     history.replace(ROUTE_PATHS.ROOT);
-    //     break;
-    //   default:
-    //     history.goBack();
-    //     break;
-    // }
-  }
-});
-
-export default withRouter(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Frame)
-);
+export default withRouter(Root);

@@ -3,12 +3,12 @@ import { MenuType } from '@src/enums';
 export const menuTypeToIcon = (iconType: MenuType) => {
   switch (iconType) {
     case MenuType.All:
-      return 'create';
+      return '全';
     case MenuType.Japanese:
-      return 'note';
+      return '和';
     case MenuType.Western:
-      return 'library_books';
+      return '洋';
     case MenuType.Chinese:
-      return 'settings';
+      return '中';
   }
 };
