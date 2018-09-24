@@ -140,7 +140,7 @@ const Osechi: React.SFC<OsechiProps> = ({ osechi, no }) => {
         <TaxPostage>{`（${taxAndPostageText(osechi)}）`}</TaxPostage>
         <CategoryBox>
           {osechi.categories.map(ca => (
-            <Category>{ca}</Category>
+            <Category key={ca}>{ca}</Category>
           ))}
         </CategoryBox>
         <PeopleFromTo>{peopleFromToText(osechi)}</PeopleFromTo>
