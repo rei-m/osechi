@@ -10,6 +10,7 @@ import {
   PeopleRangeConditionNameList,
   PriceRangeCondition,
   PriceRangeConditionList,
+  PriceRangeConditionNameList,
   SortCondition,
   SortConditionList,
   SortConditionNameList
@@ -19,8 +20,10 @@ import { osechiStore } from '@src/store/osechiStore';
 export interface SearchProps {
   osechiList: Osechi[];
   peopleRange: PeopleRangeCondition;
+  priceRange: PriceRangeCondition;
   sort: SortCondition;
   onChangePeopleRange: (peopleRange: PeopleRangeCondition) => void;
+  onChangePriceRange: (priceRange: PriceRangeCondition) => void;
   onChangeSort: (sort: SortCondition) => void;
 }
 
@@ -57,8 +60,10 @@ const SortLink: React.SFC<
 const Search: React.SFC<SearchProps> = ({
   osechiList,
   peopleRange,
+  priceRange,
   sort,
   onChangePeopleRange,
+  onChangePriceRange,
   onChangeSort
 }) => {
   const onChangePeopleRangeHandler = (
@@ -66,6 +71,13 @@ const Search: React.SFC<SearchProps> = ({
   ) => {
     const value = e.currentTarget.value;
     onChangePeopleRange(value as PeopleRangeCondition);
+  };
+
+  const onChangePriceRangeHandler = (
+    e: React.SyntheticEvent<HTMLSelectElement>
+  ) => {
+    const value = e.currentTarget.value;
+    onChangePriceRange(value as PriceRangeCondition);
   };
 
   return (
@@ -81,6 +93,22 @@ const Search: React.SFC<SearchProps> = ({
             return (
               <option value={pr} key={pr}>
                 {PeopleRangeConditionNameList[i]}
+              </option>
+            );
+          })}
+        </select>
+      </div>
+      <div>
+        <select
+          name="priceRange"
+          id="priceRange"
+          value={priceRange}
+          onChange={onChangePriceRangeHandler}
+        >
+          {PriceRangeConditionList.map((pr, i) => {
+            return (
+              <option value={pr} key={pr}>
+                {PriceRangeConditionNameList[i]}
               </option>
             );
           })}
@@ -150,14 +178,14 @@ class WrappedSearch extends React.Component<
         this.state.sort
       );
 
-      console.dir(this.onChangePriceRange);
-
       return (
         <Search
           osechiList={osechiList}
           peopleRange={peopleRange}
+          priceRange={priceRange}
           sort={this.state.sort}
           onChangePeopleRange={this.onChangePeopleRange}
+          onChangePriceRange={this.onChangePriceRange}
           onChangeSort={this.onChangeSort}
         />
       );
