@@ -16,23 +16,54 @@ const Root = styled.div`
   text-align: left;
 `;
 
+const Title = styled.div`
+  color: rgba(0, 0, 0, 0.62);
+`;
+
 const SelectRow = withAppTheme(styled.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 ${({ theme }) => theme.spacing2x};
 `;
 
 const SelectWrapper = styled.div`
   width: 100%;
+  height: 40px;
   overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+  margin-bottom: 16px;
+  position: relative;
+  box-sizing: border-box;
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  &:hover {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.87);
+  }
 `;
 
 const SelectInner = styled.select`
   width: calc(100% + 20px);
+  height: 40px;
   background: none;
   border: none;
+  outline: none;
   cursor: pointer;
+  font-size: 1.8rem;
+`;
+
+const Triangle = styled.svg`
+  top: 8px;
+  right: 0;
+  color: rgba(0, 0, 0, 0.54);
+  position: absolute;
+  pointer-events: none;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 2.4rem;
+  user-select: none;
+  flex-shrink: 0;
 `;
 
 const CustomSelectComponent = ({
@@ -43,7 +74,7 @@ const CustomSelectComponent = ({
 
 const SelectItem = (props: SelectItemProps) => (
   <Root>
-    {props.title}
+    <Title>{props.title}</Title>
     <SelectRow>
       <SelectWrapper>
         <Field
@@ -58,6 +89,9 @@ const SelectItem = (props: SelectItemProps) => (
             </option>
           ))}
         </Field>
+        <Triangle focusable="false" viewBox="0 0 24 24">
+          <path d="M7 10l5 5 5-5z" />
+        </Triangle>
       </SelectWrapper>
     </SelectRow>
   </Root>

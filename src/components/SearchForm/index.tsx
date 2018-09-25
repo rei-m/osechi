@@ -15,9 +15,14 @@ import {
 } from '@src/types';
 import SelectItem from './SelectItem';
 
-const StartButton = withAppTheme(styled.button)`
+const SearchButton = withAppTheme(styled.button)`
   margin-top: ${({ theme }) => theme.spacing4x};
   background-color: ${({ theme }) => theme.colorAccent} !important;
+  color: white;
+  padding: 8px 16px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  border-radius: 4px;
   &:active {
     background-color: ${({ theme }) => theme.colorAccentActive} !important;
   }
@@ -60,12 +65,7 @@ const SearchForm = ({ values, handleChange }: SearchFormProps) => (
       nameList={PriceRangeConditionNameList}
       handleChange={handleChange}
     />
-    <StartButton
-      type="submit"
-      className="pt-button pt-intent-primary pt-large pt-icon-edit"
-    >
-      おせちをさがす
-    </StartButton>
+    <SearchButton type="submit">おせちをさがす</SearchButton>
   </Form>
 );
 
