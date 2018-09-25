@@ -35,7 +35,7 @@ export interface SearchFormValues {
 export type SearchFormProps = FormikState<SearchFormValues> & FormikHandlers;
 
 const SearchForm = ({ values, handleChange }: SearchFormProps) => (
-  <Form>
+  <Form style={{ width: 380, margin: '0 auto' }}>
     <SelectItem
       title="おせちのジャンル"
       name="category"

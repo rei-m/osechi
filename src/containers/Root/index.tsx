@@ -22,7 +22,6 @@ const CATEGORY_INFO_MAP = {
 };
 
 const Root: React.SFC<RootProps> = ({ location, children, history }) => {
-  console.dir(location);
   const { pathname } = location;
 
   let canBack = false;

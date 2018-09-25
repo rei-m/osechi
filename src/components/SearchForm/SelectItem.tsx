@@ -4,15 +4,15 @@ import styled from 'styled-components';
 import { withAppTheme } from '@src/styles';
 
 export interface SelectItemProps {
-  readonly title: string;
-  readonly name: string;
-  readonly value: string;
-  readonly valueList: Array<string | number>;
-  readonly nameList: string[];
-  readonly handleChange: (e: React.SyntheticEvent<HTMLSelectElement>) => void;
+  title: string;
+  name: string;
+  value: string;
+  valueList: Array<string | number>;
+  nameList: string[];
+  handleChange: (e: React.SyntheticEvent<HTMLSelectElement>) => void;
 }
 
-const Label = styled.label`
+const Root = styled.div`
   text-align: left;
 `;
 
@@ -23,17 +23,31 @@ const SelectRow = withAppTheme(styled.div)`
   padding: 0 ${({ theme }) => theme.spacing2x};
 `;
 
-const SelectRange = styled.div`
+const SelectWrapper = styled.div`
   width: 100%;
+  overflow: hidden;
 `;
 
+const SelectInner = styled.select`
+  width: calc(100% + 20px);
+  background: none;
+  border: none;
+  cursor: pointer;
+`;
+
+const CustomSelectComponent = ({
+  field, // { name, value, onChange, onBlur }
+  // form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
+  ...props
+}) => <SelectInner {...field}>{props.children}</SelectInner>;
+
 const SelectItem = (props: SelectItemProps) => (
-  <Label className="pt-label">
+  <Root>
     {props.title}
     <SelectRow>
-      <SelectRange className="pt-select pt-large">
+      <SelectWrapper>
         <Field
-          component="select"
+          component={CustomSelectComponent}
           name={props.name}
           value={props.value}
           onChange={props.handleChange}
@@ -44,8 +58,8 @@ const SelectItem = (props: SelectItemProps) => (
             </option>
           ))}
         </Field>
-      </SelectRange>
+      </SelectWrapper>
     </SelectRow>
-  </Label>
+  </Root>
 );
 export default SelectItem;
