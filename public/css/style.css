@@ -12,6 +12,7 @@ body {
   font-size: 1.4rem;
   text-align: center;
   font-family: Raleway, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  /* font-family: "Hannari", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; */
 }
 
 .error-page {

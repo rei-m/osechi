@@ -16,7 +16,7 @@ import {
 import SelectItem from './SelectItem';
 
 const SearchButton = withAppTheme(styled.button)`
-  margin-top: ${({ theme }) => theme.spacing4x};
+  margin-top: ${({ theme }) => theme.spacing2x};
   background-color: ${({ theme }) => theme.colorAccent} !important;
   color: white;
   padding: 8px 16px;
@@ -40,7 +40,7 @@ export interface SearchFormValues {
 export type SearchFormProps = FormikState<SearchFormValues> & FormikHandlers;
 
 const SearchForm = ({ values, handleChange }: SearchFormProps) => (
-  <Form style={{ width: 380, margin: '0 auto' }}>
+  <Form style={{ width: 380, margin: '16px auto' }}>
     <SelectItem
       title="おせちのジャンル"
       name="category"

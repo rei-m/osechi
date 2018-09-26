@@ -3,6 +3,13 @@ import { withRouter, RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
 import OsechiView from '@src/components/Osechi';
 import {
+  SelectInner,
+  // SelectRow,
+  SelectTitle,
+  SelectWrapper,
+  Triangle
+} from '@src/components/SearchForm/SelectItem';
+import {
   CategoryConditionList,
   Osechi,
   PeopleRangeCondition,
@@ -34,6 +41,30 @@ const OsechiList = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 `;
+
+const SelectFormRoot = styled.div`
+  padding: 16px;
+`;
+
+const SelectRoot = styled.div`
+  text-align: left;
+  max-width: 300px;
+`;
+
+const CustomSelectWrapper: React.SFC<{ title: string }> = ({
+  children,
+  title
+}) => (
+  <SelectRoot>
+    <SelectTitle>{title}</SelectTitle>
+    <SelectWrapper>
+      {children}
+      <Triangle focusable="false" viewBox="0 0 24 24">
+        <path d="M7 10l5 5 5-5z" />
+      </Triangle>
+    </SelectWrapper>
+  </SelectRoot>
+);
 
 const SortLink: React.SFC<
   Pick<SearchProps, 'sort' | 'onChangeSort'> & { current: SortCondition }
@@ -82,38 +113,40 @@ const Search: React.SFC<SearchProps> = ({
 
   return (
     <Root>
-      <div>
-        <select
-          name="peopleRange"
-          id="peopleRange"
-          value={peopleRange}
-          onChange={onChangePeopleRangeHandler}
-        >
-          {PeopleRangeConditionList.map((pr, i) => {
-            return (
-              <option value={pr} key={pr}>
-                {PeopleRangeConditionNameList[i]}
-              </option>
-            );
-          })}
-        </select>
-      </div>
-      <div>
-        <select
-          name="priceRange"
-          id="priceRange"
-          value={priceRange}
-          onChange={onChangePriceRangeHandler}
-        >
-          {PriceRangeConditionList.map((pr, i) => {
-            return (
-              <option value={pr} key={pr}>
-                {PriceRangeConditionNameList[i]}
-              </option>
-            );
-          })}
-        </select>
-      </div>
+      <SelectFormRoot>
+        <CustomSelectWrapper title="ご利用人数">
+          <SelectInner
+            name="peopleRange"
+            id="peopleRange"
+            value={peopleRange}
+            onChange={onChangePeopleRangeHandler}
+          >
+            {PeopleRangeConditionList.map((pr, i) => {
+              return (
+                <option value={pr} key={pr}>
+                  {PeopleRangeConditionNameList[i]}
+                </option>
+              );
+            })}
+          </SelectInner>
+        </CustomSelectWrapper>
+        <CustomSelectWrapper title="お値段">
+          <SelectInner
+            name="priceRange"
+            id="priceRange"
+            value={priceRange}
+            onChange={onChangePriceRangeHandler}
+          >
+            {PriceRangeConditionList.map((pr, i) => {
+              return (
+                <option value={pr} key={pr}>
+                  {PriceRangeConditionNameList[i]}
+                </option>
+              );
+            })}
+          </SelectInner>
+        </CustomSelectWrapper>
+      </SelectFormRoot>
       <div>
         <SortLink
           sort={SortCondition.PriceLow}

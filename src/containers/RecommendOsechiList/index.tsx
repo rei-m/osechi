@@ -19,6 +19,12 @@ export type RecommendOsechiListProps = RecommendOsechiListOwnProps &
 
 const Root = styled.div``;
 
+const Title = styled.div`
+  font-size: 2rem;
+  line-height: 3.6rem;
+  border-bottom: 4px double #122;
+`;
+
 const OsechiList = styled.div`
   display: flex;
   justify-content: center;
@@ -30,7 +36,7 @@ const RecommendOsechiList: React.SFC<RecommendOsechiListConnectedProps> = ({
 }) => {
   return (
     <Root>
-      <div>{title}</div>
+      <Title>{title}</Title>
       <OsechiList>
         {osechiList.map((osechi, i) => (
           <OsechiView osechi={osechi} no={i + 1} key={osechi.code} />

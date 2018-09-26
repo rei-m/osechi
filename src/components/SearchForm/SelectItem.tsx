@@ -16,17 +16,17 @@ const Root = styled.div`
   text-align: left;
 `;
 
-const Title = styled.div`
+export const SelectTitle = styled.div`
   color: rgba(0, 0, 0, 0.62);
 `;
 
-const SelectRow = withAppTheme(styled.div)`
+export const SelectRow = withAppTheme(styled.div)`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-const SelectWrapper = styled.div`
+export const SelectWrapper = styled.div`
   width: 100%;
   height: 40px;
   overflow: hidden;
@@ -41,7 +41,7 @@ const SelectWrapper = styled.div`
   }
 `;
 
-const SelectInner = styled.select`
+export const SelectInner = styled.select`
   width: calc(100% + 20px);
   height: 40px;
   background: none;
@@ -51,7 +51,7 @@ const SelectInner = styled.select`
   font-size: 1.8rem;
 `;
 
-const Triangle = styled.svg`
+export const Triangle = styled.svg`
   top: 8px;
   right: 0;
   color: rgba(0, 0, 0, 0.54);
@@ -74,7 +74,7 @@ const CustomSelectComponent = ({
 
 const SelectItem = (props: SelectItemProps) => (
   <Root>
-    <Title>{props.title}</Title>
+    <SelectTitle>{props.title}</SelectTitle>
     <SelectRow>
       <SelectWrapper>
         <Field

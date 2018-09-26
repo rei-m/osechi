@@ -29,7 +29,7 @@ export const Body = withAppTheme<BodyProps>(styled.div)`
     padding-top: ${({ theme }) => theme.headerHeightWide};
     padding-bottom: 0;
     padding-left: ${({ isDisplayNav, theme }) =>
-      isDisplayNav ? theme.bottomNavHeight : '0'};
+      isDisplayNav ? theme.bottomNavHeightWide : '0'};
   }
 `;
 

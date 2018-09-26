@@ -81,8 +81,10 @@ export const osechiStore = {
     sort: SortCondition
   ) => {
     const filter = filterCreator(category, peopleRange, priceRange);
-    return OSECHI_LIST.filter(osechi => filter(osechi)).sort(
-      sort === SortCondition.PriceLow ? priceLowComparator : priceHighComparator
-    );
+    const comparator =
+      sort === SortCondition.PriceLow
+        ? priceLowComparator
+        : priceHighComparator;
+    return OSECHI_LIST.filter(osechi => filter(osechi)).sort(comparator);
   }
 };
