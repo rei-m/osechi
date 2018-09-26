@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { StyledFunction } from 'styled-components';
+import { withAppTheme } from '@src/styles';
 import OsechiView from '@src/components/Osechi';
 import {
   SelectInner,
-  // SelectRow,
   SelectTitle,
   SelectWrapper,
   Triangle
@@ -40,15 +40,72 @@ const OsechiList = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
 `;
 
-const SelectFormRoot = styled.div`
-  padding: 16px;
+const SelectFormRoot = withAppTheme(styled.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 16px 0;
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
+    margin: 0;
+    flex-direction: row;
+  }
 `;
 
-const SelectRoot = styled.div`
+const SelectRoot = withAppTheme(styled.div)`
   text-align: left;
   max-width: 300px;
+  min-width: 300px;
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
+    margin: 16px;
+  }
+`;
+
+const SortRoot = withAppTheme(styled.div)`
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 8px auto;
+  padding: 0 16px;
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
+    text-align: right;
+  }
+`;
+
+const a: StyledFunction<
+  { isLeft: boolean } & React.HTMLProps<HTMLAnchorElement>
+> = styled.a;
+
+const SortA = a`
+  padding: 8px 24px;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #ae9b63;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: ${props => (props.isLeft ? '5px 0 0 5px' : '0 5px 5px 0')};
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: #f3f3f2;
+    cursor: pointer;
+  }
+`;
+
+const span: StyledFunction<
+  { isLeft: boolean } & React.HTMLProps<HTMLSpanElement>
+> = styled.a;
+
+const SortSpan = span`
+  padding: 8px 24px;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #ae9b63;
+  border: 1px solid #ccc;
+  ${props => (props.isLeft ? 'border-right: none' : 'border-left: none')};
+  border-radius: ${props => (props.isLeft ? '5px 0 0 5px' : '0 5px 5px 0')};
 `;
 
 const CustomSelectWrapper: React.SFC<{ title: string }> = ({
@@ -70,9 +127,10 @@ const SortLink: React.SFC<
   Pick<SearchProps, 'sort' | 'onChangeSort'> & { current: SortCondition }
 > = ({ sort, onChangeSort, current }) => {
   const index = SortConditionList.findIndex(sc => sc === sort);
+  const isLeft = sort === SortCondition.PriceLow;
 
   if (sort === current) {
-    return <span>{SortConditionNameList[index]}</span>;
+    return <SortSpan isLeft={isLeft}>{SortConditionNameList[index]}</SortSpan>;
   }
 
   const onClickSort = (e: React.SyntheticEvent<HTMLAnchorElement>) => {
@@ -82,9 +140,9 @@ const SortLink: React.SFC<
   };
 
   return (
-    <a href="#" onClick={onClickSort}>
+    <SortA href="#" onClick={onClickSort} isLeft={isLeft}>
       {SortConditionNameList[index]}
-    </a>
+    </SortA>
   );
 };
 
@@ -147,7 +205,7 @@ const Search: React.SFC<SearchProps> = ({
           </SelectInner>
         </CustomSelectWrapper>
       </SelectFormRoot>
-      <div>
+      <SortRoot>
         <SortLink
           sort={SortCondition.PriceLow}
           current={sort}
@@ -158,7 +216,7 @@ const Search: React.SFC<SearchProps> = ({
           current={sort}
           onChangeSort={onChangeSort}
         />
-      </div>
+      </SortRoot>
       <OsechiList>
         {osechiList.length > 0 ? (
           osechiList.map((osechi, i) => (
