@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled, { StyledFunction } from 'styled-components';
 import { Osechi } from '@src/types';
+import { siteIdToSite } from '@src/utils';
 
 export interface OsechiProps {
   osechi: Osechi;
@@ -41,7 +42,7 @@ const rootElement: StyledFunction<RootProps & React.HTMLProps<HTMLElement>> =
   styled.article;
 
 const Root = rootElement`
-  padding: 16px;
+  padding: 28px 16px 16px 16px;
   box-sizing: border-box;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 1px -1px rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -77,7 +78,7 @@ const Root = rootElement`
 `;
 
 const Title = styled.div`
-  font-size: 2.2rem;
+  font-size: 2rem;
   padding: 8px;
 `;
 
@@ -127,10 +128,21 @@ const PeopleFromTo = styled.div`
   font-size: 2rem;
 `;
 
+const SiteName = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 8px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #887f7a;
+`;
+
 const Osechi: React.SFC<OsechiProps> = ({ osechi, no }) => {
   return (
     <Root no={no}>
       <Link href={osechi.url} target="_blank">
+        <SiteName>{`掲載サイト: ${siteIdToSite(osechi.siteId).name}`}</SiteName>
         <div>{osechi.catchCopy}</div>
         <Title>{osechi.name}</Title>
         <div>

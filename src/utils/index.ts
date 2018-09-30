@@ -1,4 +1,6 @@
 import { MenuType } from '@src/enums';
+import { Site } from '@src/types';
+import { SITE_LIST } from '@src/assets/site';
 
 export const menuTypeToIcon = (iconType: MenuType) => {
   switch (iconType) {
@@ -12,3 +14,7 @@ export const menuTypeToIcon = (iconType: MenuType) => {
       return '中';
   }
 };
+
+const SITE_MAP = SITE_LIST;
+
+export const siteIdToSite = (siteId: number): Site => SITE_MAP[siteId - 1];
