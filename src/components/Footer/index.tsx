@@ -8,6 +8,23 @@ export interface FooterProps {
   isDisplayNav: boolean;
 }
 
+const LinkList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
+    flex-direction: row;
+  }
+`;
+
+const LinkWrapper = styled.li`
+  margin: 8px;
+`;
+
 const LinkInner = withAppTheme(styled.span)`
   cursor: pointer;
   color: ${({ theme }) => theme.colorPrimaryDark};
@@ -36,34 +53,42 @@ const Root = withAppTheme<FooterProps>(styled.footer)`
 
 const Footer: React.SFC<FooterProps> = ({ isDisplayNav }) => (
   <Root isDisplayNav={isDisplayNav}>
-    <Link
-      to={ROUTE_PATHS.ROOT}
-      style={{
-        textDecoration: 'none',
-        margin: '0 16px'
-      }}
-    >
-      <LinkInner>おせち.jp</LinkInner>
-    </Link>
-    <a
-      href="https://rei-m.github.io/app/policy/"
-      target="_blank"
-      style={{
-        textDecoration: 'none',
-        margin: '0 16px'
-      }}
-    >
-      <LinkInner>プライバシーポリシー</LinkInner>
-    </a>
-    <Link
-      to={ROUTE_PATHS.SITE_MAPS}
-      style={{
-        textDecoration: 'none',
-        margin: '0 16px'
-      }}
-    >
-      <LinkInner>サイトマップ</LinkInner>
-    </Link>
+    <LinkList>
+      <LinkWrapper>
+        <Link
+          to={ROUTE_PATHS.ROOT}
+          style={{
+            textDecoration: 'none',
+            margin: '0 16px'
+          }}
+        >
+          <LinkInner>おせち.jp</LinkInner>
+        </Link>
+      </LinkWrapper>
+      <LinkWrapper>
+        <a
+          href="https://rei-m.github.io/app/policy/"
+          target="_blank"
+          style={{
+            textDecoration: 'none',
+            margin: '0 16px'
+          }}
+        >
+          <LinkInner>プライバシーポリシー</LinkInner>
+        </a>
+      </LinkWrapper>
+      <LinkWrapper>
+        <Link
+          to={ROUTE_PATHS.SITE_MAPS}
+          style={{
+            textDecoration: 'none',
+            margin: '0 16px'
+          }}
+        >
+          <LinkInner>サイトマップ</LinkInner>
+        </Link>
+      </LinkWrapper>
+    </LinkList>
   </Root>
 );
 

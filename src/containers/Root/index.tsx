@@ -26,9 +26,9 @@ const Root: React.SFC<RootProps> = ({ location, children, history }) => {
 
   let canBack = false;
   const isDisplayNav = true;
-  let subTitle = 'おせち. jp';
-  const description =
-    '百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。';
+  let subTitle = 'おせち.jp';
+  let description =
+    'いろいろなおせち販売サイトのおせちを比較することができます。おせち.jpで新年を迎えるにふさわしいおせちを探しましょう。';
   let currentMenuType: MenuType = MenuType.All;
 
   const onClickBack = () => {
@@ -42,14 +42,11 @@ const Root: React.SFC<RootProps> = ({ location, children, history }) => {
       const pageInfo = CATEGORY_INFO_MAP[matchParams[2]];
       subTitle = pageInfo.subTitle;
       currentMenuType = pageInfo.menuType;
+      description = `${subTitle}のページです。${description}`;
     }
-    //   description =
-    //     '百人一首の暗記を練習できます。出題条件を組み合わせて自分にあったペースで練習できます。百人一首の歌の意味に触れながら楽しく覚えましょう。';
-    //   if (pathname.indexOf(ROUTE_PATHS.TRAINING_QUESTION) >= 0) {
-    //     isDisplayNav = false;
-    //   }
   } else if (pathname.indexOf(ROUTE_PATHS.SITE_MAPS) >= 0) {
-    //   canBack = true;
+    canBack = true;
+    description = `サイトマップ。${description}`;
   }
 
   return (
