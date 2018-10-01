@@ -12,6 +12,7 @@ import Search from '@src/containers/Search';
 import NotFound from '@src/components/NotFound';
 import ErrorBoundary from '@src/components/ErrorBoundary';
 import Home from '@src/containers/Home';
+import SiteMaps from '@src/components/SiteMaps';
 import { ROUTE_PATHS } from '@src/constants';
 
 const Application = (_props: RouteComponentProps<{}>) => (
@@ -20,6 +21,7 @@ const Application = (_props: RouteComponentProps<{}>) => (
       <Switch>
         <Route exact path={ROUTE_PATHS.ROOT} component={Home} />
         <Route path={ROUTE_PATHS.CATEGORY} component={Search} />
+        <Route exact path={ROUTE_PATHS.SITE_MAPS} component={SiteMaps} />
         <Route component={NotFound} />
       </Switch>
     </Root>
@@ -29,6 +31,7 @@ const Application = (_props: RouteComponentProps<{}>) => (
 const Enhanced = lifecycle<RouteComponentProps<{}>, {}>({
   componentDidUpdate(prevProps: RouteComponentProps<{}>) {
     if (this.props.location.pathname !== prevProps.location.pathname) {
+      window.scrollTo(0, 0);
       ReactGA.pageview(location.pathname + location.search);
     }
   }

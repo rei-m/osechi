@@ -34,7 +34,7 @@ export interface SearchProps {
   onChangeSort: (sort: SortCondition) => void;
 }
 
-const Root = styled.section``;
+const Root = styled.article``;
 
 const OsechiList = styled.div`
   display: flex;

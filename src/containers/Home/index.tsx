@@ -46,7 +46,7 @@ export const Home: React.SFC<HomeProps> = ({ history }) => {
   };
 
   return (
-    <div>
+    <article>
       <Banner />
       <SearchFormSection>
         <SearchFormSectionTitle>おせちをさがす</SearchFormSectionTitle>
@@ -61,7 +61,7 @@ export const Home: React.SFC<HomeProps> = ({ history }) => {
       <RecommendOsechiList style={{ marginTop: 24 }} category="we" />
       <RecommendOsechiList style={{ marginTop: 24 }} category="ch" />
       <AboutSite style={{ marginTop: 24 }} />
-    </div>
+    </article>
   );
 };
 
