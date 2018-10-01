@@ -24,7 +24,7 @@ const SearchButton = withAppTheme(styled.button)`
   cursor: pointer;
   border-radius: 4px;
   &:active {
-    background-color: ${({ theme }) => theme.colorAccentActive} !important;
+    background-color: ${({ theme }) => theme.colorAccent} !important;
   }
   &:hover {
     background-color: ${({ theme }) => theme.colorAccentHover} !important;
@@ -40,7 +40,7 @@ export interface SearchFormValues {
 export type SearchFormProps = FormikState<SearchFormValues> & FormikHandlers;
 
 const SearchForm = ({ values, handleChange }: SearchFormProps) => (
-  <Form style={{ width: 380, margin: '16px auto' }}>
+  <Form style={{ maxWidth: 380, margin: '16px auto' }}>
     <SelectItem
       title="おせちのジャンル"
       name="category"

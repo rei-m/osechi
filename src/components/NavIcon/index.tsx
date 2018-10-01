@@ -16,11 +16,10 @@ const span: StyledFunction<IconProps & React.HTMLProps<HTMLElement>> =
 
 const Icon = span`
   height: 56px;
-  color: #fff;
+  color: ${props => (props.isCurrent ? '#fff' : '#e0e0e0')};
   text-align: center;
   box-sizing: border-box;
   width: inherit;
-  opacity: ${props => (props.isCurrent ? 1 : 0.8)};
   display: inline-block;
   font-size: 2.2rem;
   line-height: 4.8rem;

@@ -2,11 +2,14 @@ import * as React from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import RecommendOsechiList from '@src/containers/RecommendOsechiList';
 import SearchForm from '@src/components/SearchForm';
+import Banner from '@src/components/Banner';
+import AboutSite from '@src/components/AboutSite';
 import {
   CategoryCondition,
   PeopleRangeCondition,
   PriceRangeCondition
 } from '@src/types';
+import styled from 'styled-components';
 
 export type HomeProps = RouteComponentProps<{}>;
 
@@ -22,6 +25,17 @@ const conditionHolder: ConditionHolder = {
   peopleRange: PeopleRangeCondition.All
 };
 
+const SearchFormSection = styled.section`
+  background-color: #fff8e1;
+  padding: 16px 0;
+  box-sizing: border-box;
+`;
+
+const SearchFormSectionTitle = styled.h2`
+  font-size: 2.2rem;
+  margin: 0 0 8px 0;
+`;
+
 export const Home: React.SFC<HomeProps> = ({ history }) => {
   const onSubmitHundler = (category, peopleRange, priceRange) => {
     conditionHolder.category = category;
@@ -33,25 +47,20 @@ export const Home: React.SFC<HomeProps> = ({ history }) => {
 
   return (
     <div>
-      <div
-        style={{
-          width: '100%',
-          height: 80,
-          padding: 16,
-          backgroundColor: '#00a381'
-        }}
-      >
-        バナー
-      </div>
-      <SearchForm
-        initialCategory={conditionHolder.category}
-        initialPeopleRange={conditionHolder.peopleRange}
-        initialPriceRange={conditionHolder.priceRange}
-        handleSubmit={onSubmitHundler}
-      />
-      <RecommendOsechiList category="和" />
-      <RecommendOsechiList category="洋" />
-      <RecommendOsechiList category="中" />
+      <Banner />
+      <SearchFormSection>
+        <SearchFormSectionTitle>おせちをさがす</SearchFormSectionTitle>
+        <SearchForm
+          initialCategory={conditionHolder.category}
+          initialPeopleRange={conditionHolder.peopleRange}
+          initialPriceRange={conditionHolder.priceRange}
+          handleSubmit={onSubmitHundler}
+        />
+      </SearchFormSection>
+      <RecommendOsechiList style={{ marginTop: 24 }} category="ja" />
+      <RecommendOsechiList style={{ marginTop: 24 }} category="we" />
+      <RecommendOsechiList style={{ marginTop: 24 }} category="ch" />
+      <AboutSite style={{ marginTop: 24 }} />
     </div>
   );
 };

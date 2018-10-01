@@ -6,6 +6,7 @@ import { APP_NAME } from '@src/constants';
 import { MenuType } from '@src/enums';
 import Header from '@src/components/Header';
 import Navigation from '@src/components/Navigation';
+import Footer from '@src/components/Footer';
 
 export interface FrameProps {
   subTitle: string;
@@ -20,15 +21,12 @@ type BodyProps = Pick<FrameProps, 'isDisplayNav'>;
 
 export const Body = withAppTheme<BodyProps>(styled.div)`
   padding-top: ${({ theme }) => theme.headerHeight};
-  padding-bottom: ${({ isDisplayNav, theme }) =>
-    isDisplayNav ? theme.bottomNavHeight : '0'};
   text-align: center;
   background-color: ${({ theme }) => theme.colorThin};
   min-height: 100vh;
   @media screen and (min-width: ${({ theme }) => theme.minWidthWide}) {
     padding-top: ${({ theme }) => theme.headerHeightWide};
-    padding-bottom: 0;
-    padding-left: ${({ isDisplayNav, theme }) =>
+    margin-left: ${({ isDisplayNav, theme }) =>
       isDisplayNav ? theme.bottomNavHeightWide : '0'};
   }
 `;
@@ -53,6 +51,7 @@ const Frame: React.SFC<FrameProps> = ({
     </Helmet>
     <Header subTitle={subTitle} canBack={canBack} onClickBack={onClickBack} />
     <Body isDisplayNav={isDisplayNav}>{children}</Body>
+    <Footer isDisplayNav={isDisplayNav} />
     {isDisplayNav && <Navigation currentMenuType={currentMenuType} />}
   </div>
 );

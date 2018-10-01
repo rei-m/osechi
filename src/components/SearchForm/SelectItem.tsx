@@ -14,6 +14,8 @@ export interface SelectItemProps {
 
 const Root = styled.div`
   text-align: left;
+  box-sizing: border-box;
+  padding: 0 16px;
 `;
 
 export const SelectTitle = styled.div`

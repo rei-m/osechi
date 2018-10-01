@@ -9,7 +9,7 @@ import NavIcon from '@src/components/NavIcon';
 import { PeopleRangeCondition, PriceRangeCondition } from '@src/types';
 
 export interface NavigationProps {
-  readonly currentMenuType?: MenuType;
+  currentMenuType?: MenuType;
 }
 
 const Root = withAppTheme(styled.nav)`

@@ -83,7 +83,7 @@ const SortA = a`
   padding: 8px 24px;
   font-size: 1.4rem;
   text-decoration: none;
-  color: #ae9b63;
+  color: #ffa000;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: ${props => (props.isLeft ? '5px 0 0 5px' : '0 5px 5px 0')};
@@ -102,7 +102,7 @@ const SortSpan = span`
   padding: 8px 24px;
   font-size: 1.4rem;
   color: #fff;
-  background-color: #ae9b63;
+  background-color: #ffb300;
   border: 1px solid #ccc;
   ${props => (props.isLeft ? 'border-right: none' : 'border-left: none')};
   border-radius: ${props => (props.isLeft ? '5px 0 0 5px' : '0 5px 5px 0')};

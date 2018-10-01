@@ -26,7 +26,7 @@ const Root: React.SFC<RootProps> = ({ location, children, history }) => {
 
   let canBack = false;
   const isDisplayNav = true;
-  let subTitle = 'おせちをさがすならおせち.jp';
+  let subTitle = 'おせち. jp';
   const description =
     '百人一首の暗記を練習できます。百人一首の札の画像や現代語訳も載せています。百人一首の歌の意味に触れながら楽しく覚えましょう。';
   let currentMenuType: MenuType = MenuType.All;
@@ -35,7 +35,7 @@ const Root: React.SFC<RootProps> = ({ location, children, history }) => {
     history.goBack();
   };
 
-  if (pathname.indexOf(ROUTE_PATHS.CATEGORIES) >= 0) {
+  if (pathname.indexOf('/categories') >= 0) {
     canBack = true;
     const matchParams = pathname.split('/');
     if (matchParams.length > 3 && CATEGORY_INFO_MAP[matchParams[2]]) {
@@ -48,7 +48,7 @@ const Root: React.SFC<RootProps> = ({ location, children, history }) => {
     //   if (pathname.indexOf(ROUTE_PATHS.TRAINING_QUESTION) >= 0) {
     //     isDisplayNav = false;
     //   }
-  } else if (pathname.indexOf(ROUTE_PATHS.CATEGORY) >= 0) {
+  } else if (pathname.indexOf(ROUTE_PATHS.SITE_MAPS) >= 0) {
     //   canBack = true;
   }
 
