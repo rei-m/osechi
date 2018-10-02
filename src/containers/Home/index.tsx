@@ -10,6 +10,8 @@ import {
   PriceRangeCondition
 } from '@src/types';
 import styled from 'styled-components';
+import * as fbIcon from './fb_icon.png';
+import * as twIcon from './tw_icon.png';
 
 export type HomeProps = RouteComponentProps<{}>;
 
@@ -43,6 +45,9 @@ const ShareBox = styled.div`
   padding: 8px;
 `;
 
+const SHARE_TEXT =
+  '%E3%81%8A%E3%81%9B%E3%81%A1.jp%E3%81%A7%E6%96%B0%E5%B9%B4%E3%82%92%E8%BF%8E%E3%81%88%E3%82%8B%E3%81%AB%E3%81%B5%E3%81%95%E3%82%8F%E3%81%97%E3%81%84%E3%81%8A%E3%81%9B%E3%81%A1%E3%82%92%E6%8E%A2%E3%81%97%E3%81%BE%E3%81%97%E3%82%87%E3%81%86%E3%80%82';
+
 export const Home: React.SFC<HomeProps> = ({ history }) => {
   const onSubmitHundler = (category, peopleRange, priceRange) => {
     conditionHolder.category = category;
@@ -56,25 +61,36 @@ export const Home: React.SFC<HomeProps> = ({ history }) => {
     <article>
       <Banner />
       <ShareBox>
-        <div
-          className="fb-like"
-          data-href="https://osechi.jp/"
-          data-layout="button_count"
-          data-action="like"
-          data-size="small"
-          data-show-faces="false"
-          data-share="false"
-          style={{ marginRight: 8 }}
-        />
         <a
-          href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-          className="twitter-share-button"
-          data-url="https://osechi.jp"
-          data-count="vertical"
-          data-text="おせち.jpで新年を迎えるにふさわしいおせちを探しましょう。"
-          data-lang="ja"
+          href="https://www.facebook.com/share.php?u=https://osechi.jp"
+          rel="nofollow"
+          target="_blank"
         >
-          Tweet
+          <img
+            src={fbIcon}
+            alt="Facebookでシェアする"
+            style={{
+              width: 24,
+              height: 24
+            }}
+          />
+        </a>
+        <a
+          href={`https://twitter.com/share?url=https://osechi.jp&amp;text=${SHARE_TEXT}`}
+          rel="nofollow"
+          target="_blank"
+          style={{
+            marginLeft: 8
+          }}
+        >
+          <img
+            src={twIcon}
+            alt="Twitterでシェアする"
+            style={{
+              width: 24,
+              height: 24
+            }}
+          />
         </a>
       </ShareBox>
       <SearchFormSection>
