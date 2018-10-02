@@ -46,6 +46,7 @@ const Frame: React.SFC<FrameProps> = ({
         name="keywords"
         content="おせち,2019年のおせち,おすすめのおせち,おせちのおすすめ,2019,おせちの通販,今年のおせち,おせちの食べ方"
       />
+      <meta name="og:description" content={description} />
       <meta name="description" content={description} />
       <title>{`${APP_NAME} - ${subTitle} -`}</title>
     </Helmet>
