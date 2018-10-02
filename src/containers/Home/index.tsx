@@ -57,10 +57,14 @@ export const Home: React.SFC<HomeProps> = ({ history }) => {
       <Banner />
       <ShareBox>
         <div
-          style={{ marginRight: 8 }}
-          className="fb-share-button"
-          data-href="https://osechi.jp"
+          className="fb-like"
+          data-href="https://osechi.jp/"
           data-layout="button_count"
+          data-action="like"
+          data-size="small"
+          data-show-faces="false"
+          data-share="false"
+          style={{ marginRight: 8 }}
         />
         <a
           href="https://twitter.com/share?ref_src=twsrc%5Etfw"
