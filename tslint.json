@@ -32,6 +32,7 @@
     "jsdoc-format": true,
     "interface-name": [true, "never-prefix"],
     "object-literal-shorthand": false,
+    "object-literal-sort-keys": false,
     "ordered-imports": [
       true, {
         "import-sources-order": "any",

@@ -58,7 +58,8 @@
     "baseUrl": "./",
     "paths": {
       "@src/*": [ "src/*" ]
-    }
+    },
+    "keyofStringsOnly": true
   },
   "exclude": [
     "node_modules"
