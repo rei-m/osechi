@@ -36,6 +36,13 @@ const SearchFormSectionTitle = styled.h2`
   margin: 0 0 8px 0;
 `;
 
+const ShareBox = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  background-color: #fff8e1;
+  padding: 8px;
+`;
+
 export const Home: React.SFC<HomeProps> = ({ history }) => {
   const onSubmitHundler = (category, peopleRange, priceRange) => {
     conditionHolder.category = category;
@@ -48,6 +55,24 @@ export const Home: React.SFC<HomeProps> = ({ history }) => {
   return (
     <article>
       <Banner />
+      <ShareBox>
+        <div
+          style={{ marginRight: 8 }}
+          className="fb-share-button"
+          data-href="https://osechi.jp"
+          data-layout="button_count"
+        />
+        <a
+          href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+          className="twitter-share-button"
+          data-url="https://osechi.jp"
+          data-count="vertical"
+          data-text="おせち.jpで新年を迎えるにふさわしいおせちを探しましょう。"
+          data-lang="ja"
+        >
+          Tweet
+        </a>
+      </ShareBox>
       <SearchFormSection>
         <SearchFormSectionTitle>おせちをさがす</SearchFormSectionTitle>
         <SearchForm
