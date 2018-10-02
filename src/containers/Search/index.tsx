@@ -225,7 +225,9 @@ const Search: React.SFC<SearchProps> = ({
             </div>
           ))
         ) : (
-          <div>空だよ</div>
+          <div style={{ padding: 32, fontSize: '2.0rem' }}>
+            ご希望の条件のおせちが見つかりませんでした。。。
+          </div>
         )}
       </OsechiList>
     </Root>
