@@ -59,10 +59,10 @@ const MainTitle = styled.h1`
 
 const Banner: React.SFC<{}> = () => (
   <Root>
-    <BannerImage src={osechi_banner_m} alt="おせちイメージ" />
+    <BannerImage src={osechi_banner_m} alt="2019年のおせちはおせち.jpで" />
     <Mask />
     <TitleBox>
-      <MainTitle>おせち.jpで新年のお祝いを</MainTitle>
+      <MainTitle>2019年のおせちはおせち.jpで</MainTitle>
     </TitleBox>
   </Root>
 );
