@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled, { StyledFunction } from 'styled-components';
 import { Osechi } from '@src/types';
-import { siteIdToSite } from '@src/utils';
+import { affiliateUrl, siteIdToSite } from '@src/utils';
 
 export interface OsechiProps {
   osechi: Osechi;
@@ -141,7 +141,7 @@ const SiteName = styled.div`
 const Osechi: React.SFC<OsechiProps> = ({ osechi, no }) => {
   return (
     <Root no={no}>
-      <Link href={osechi.url} target="_blank">
+      <Link href={affiliateUrl(osechi)} target="_blank">
         <SiteName>{`掲載サイト: ${siteIdToSite(osechi.siteId).name}`}</SiteName>
         <div>{osechi.catchCopy}</div>
         <Title>{osechi.name}</Title>
