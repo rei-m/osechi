@@ -28,7 +28,7 @@ const Root: React.SFC<RootProps> = ({ location, children, history }) => {
   const isDisplayNav = true;
   let subTitle = 'おせち.jp';
   let description =
-    'いろいろなおせち販売サイトのおせちを比較することができます。おせち.jpで新年を迎えるにふさわしいおせちを探しましょう。';
+    'おせち.jpではいろいろなおせち販売サイトのおせちを比較することができます。定番のおせちや少し変わったおせちまで簡単に条件を指定して探せます。2019年のおせちはおせち.jpでお好みのおせちを探してはいかがでしょうか。';
   let currentMenuType: MenuType = MenuType.All;
 
   const onClickBack = () => {
@@ -42,10 +42,11 @@ const Root: React.SFC<RootProps> = ({ location, children, history }) => {
       const pageInfo = CATEGORY_INFO_MAP[matchParams[2]];
       subTitle = pageInfo.subTitle;
       currentMenuType = pageInfo.menuType;
-      description = `${subTitle}のページです。${description}`;
+      description = `${subTitle}を紹介しています。${description}`;
     }
   } else if (pathname.indexOf(ROUTE_PATHS.SITE_MAPS) >= 0) {
     canBack = true;
+    subTitle = 'サイトマップ';
     description = `サイトマップ。${description}`;
   }
 
