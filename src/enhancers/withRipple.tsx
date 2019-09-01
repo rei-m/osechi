@@ -1,5 +1,5 @@
-import * as React from 'react';
-import styled, { keyframes } from 'styled-components';
+import React from 'react';
+import styled, { keyframes } from '@src/styles/styled-components';
 
 const rippleAnimation = keyframes`
   to {
@@ -9,8 +9,8 @@ const rippleAnimation = keyframes`
 `;
 
 const RippleContainer = styled.div`
-  position: relative;
-  overflow: hidden;
+  position: relative !important;
+  overflow: hidden !important;
   & .ripple-effect {
     position: absolute;
     border-radius: 50%;
@@ -24,60 +24,40 @@ const RippleContainer = styled.div`
 
 export interface RippledComponentProps {
   color?: string;
+  style?: React.CSSProperties;
 }
 
-// このHOC中途半端で汎用的に使えないので注意
-export function withRipple<T extends React.HTMLAttributes<HTMLElement>>(
-  WrappedComponent: React.ComponentClass<T>
-) {
-  return class RippledComponent extends React.Component<
-    RippledComponentProps & T
-  > {
-    public static defaultProps: RippledComponentProps = { color: '#fff' };
+// このHOC中途半端なので作り直したさ
+export function withRipple<T>(WrappedComponent: React.ComponentType<T>) {
+  return (props: T & RippledComponentProps) => {
+    const color = props.color ? props.color : '#fff';
 
-    private container: HTMLDivElement;
-    private clearRippleTimer: number;
+    const [timerHolder] = React.useState<{
+      clearRippleTimer: number | undefined;
+    }>({ clearRippleTimer: undefined });
 
-    constructor(props: RippledComponentProps & T) {
-      super(props);
-      this.holdContainer = this.holdContainer.bind(this);
-      this.addRipple = this.addRipple.bind(this);
-      this.clearRipple = this.clearRipple.bind(this);
-    }
+    // tslint:disable-next-line:no-null-keyword
+    const containerEl = React.useRef<HTMLDivElement>(null);
 
-    public render() {
-      return (
-        <RippleContainer
-          innerRef={this.holdContainer}
-          onMouseDown={this.addRipple}
-          onMouseUp={this.clearRipple}
-        >
-          <WrappedComponent {...this.props} />
-        </RippleContainer>
-      );
-    }
+    React.useEffect(() => {
+      return function cleanup() {
+        if (timerHolder.clearRippleTimer) {
+          window.clearTimeout(timerHolder.clearRippleTimer);
+        }
+      };
+    });
 
-    public componentWillUnmount() {
-      if (this.clearRippleTimer) {
-        window.clearTimeout(this.clearRippleTimer);
-      }
-    }
-
-    private holdContainer(component: HTMLDivElement) {
-      this.container = component;
-    }
-
-    private addRipple(event: React.MouseEvent<HTMLDivElement>) {
+    const addRipple = (event: React.MouseEvent<HTMLDivElement>) => {
       const {
         width,
         height,
         left,
-        top
-      } = this.container.getBoundingClientRect();
+        top,
+      } = containerEl.current!.getBoundingClientRect();
 
       const effect = document.createElement('span');
       effect.className = 'ripple-effect';
-      this.container.appendChild(effect);
+      containerEl.current!.appendChild(effect);
 
       const size = Math.max(width, height);
       const ripplerStyle = [
@@ -85,21 +65,34 @@ export function withRipple<T extends React.HTMLAttributes<HTMLElement>>(
         `top: ${event.clientY - top - size / 2}px`,
         `width: ${size}px`,
         `height: ${size}px`,
-        `background-color: ${this.props.color}`
+        `background-color: ${color}`,
       ];
       effect.setAttribute('style', ripplerStyle.join('; '));
-    }
+    };
 
-    private clearRipple() {
-      if (this.clearRippleTimer) {
-        window.clearTimeout(this.clearRippleTimer);
+    const clearRipple = () => {
+      if (timerHolder.clearRippleTimer) {
+        window.clearTimeout(timerHolder.clearRippleTimer);
       }
-      this.clearRippleTimer = window.setTimeout(() => {
-        const ripples = this.container.getElementsByClassName('ripple-effect');
-        [...Array(ripples.length).keys()].reverse().forEach(i => {
-          this.container.removeChild(ripples.item(i));
-        });
+      timerHolder.clearRippleTimer = window.setTimeout(() => {
+        const ripples = containerEl.current!.getElementsByClassName(
+          'ripple-effect'
+        );
+        Array.from(Array(ripples.length).keys())
+          .reverse()
+          .forEach(i => containerEl.current!.removeChild(ripples.item(i)!));
       }, 1000);
-    }
+    };
+
+    return (
+      <RippleContainer
+        ref={containerEl}
+        onMouseDown={addRipple}
+        onMouseUp={clearRipple}
+        style={props.style}
+      >
+        <WrappedComponent {...props} style={{}} />
+      </RippleContainer>
+    );
   };
 }
