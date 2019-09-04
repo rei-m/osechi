@@ -13,15 +13,17 @@ export const useRecommendOsechiList = (category: 'ja' | 'we' | 'ch') => {
         break;
       }
       case 'we': {
-        osechiList.push(osechiStore.findByCode('1_takasagodd'));
-        osechiList.push(osechiStore.findByCode('1_deandeluca'));
-        osechiList.push(osechiStore.findByCode('2_bistrot-gagnant_2018_2dan'));
+        osechiList.push(osechiStore.findByCode('3_disney'));
+        osechiList.push(
+          osechiStore.findByCode('2_chesapeake_2017osechi-2danzyu')
+        );
+        osechiList.push(osechiStore.findByCode('2_ailes_osechi2018-03'));
         break;
       }
       case 'ch': {
         osechiList.push(osechiStore.findByCode('1_takasagocn'));
-        osechiList.push(osechiStore.findByCode('2_kiyouken_g201925000'));
-        osechiList.push(osechiStore.findByCode('2_saiko-ro_osechi1'));
+        osechiList.push(osechiStore.findByCode('2_kiyouken_g202018000'));
+        osechiList.push(osechiStore.findByCode('2_kandatouen_2017-2dan'));
       }
     }
     return osechiList;
