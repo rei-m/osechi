@@ -1,7 +1,7 @@
 export enum AppErrorType {
   Network,
   NotFound,
-  Unknown
+  Unknown,
 }
 
 export const UNKNOWN_MESSAGE =
