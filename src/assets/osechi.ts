@@ -12,7 +12,7 @@ export const OISIX_LIST: Osechi[] = [
     price: 12380,
     categories: ['和'],
     includeTax: false,
-    includePostage: true
+    includePostage: true,
   },
   {
     siteId: 1,
@@ -25,7 +25,7 @@ export const OISIX_LIST: Osechi[] = [
     price: 14800,
     categories: ['和', '洋'],
     includeTax: false,
-    includePostage: true
+    includePostage: true,
   },
   {
     siteId: 1,
@@ -38,7 +38,7 @@ export const OISIX_LIST: Osechi[] = [
     price: 19800,
     categories: ['和', '洋'],
     includeTax: false,
-    includePostage: true
+    includePostage: true,
   },
   {
     siteId: 1,
@@ -51,7 +51,7 @@ export const OISIX_LIST: Osechi[] = [
     price: 28400,
     categories: ['和', '洋'],
     includeTax: false,
-    includePostage: true
+    includePostage: true,
   },
   {
     siteId: 1,
@@ -64,7 +64,7 @@ export const OISIX_LIST: Osechi[] = [
     price: 26500,
     categories: ['和', '洋'],
     includeTax: false,
-    includePostage: true
+    includePostage: true,
   },
   {
     siteId: 1,
@@ -77,7 +77,7 @@ export const OISIX_LIST: Osechi[] = [
     price: 26500,
     categories: ['和', '洋', '中'],
     includeTax: false,
-    includePostage: true
+    includePostage: true,
   },
   {
     siteId: 1,
@@ -90,7 +90,7 @@ export const OISIX_LIST: Osechi[] = [
     price: 32700,
     categories: ['和'],
     includeTax: false,
-    includePostage: true
+    includePostage: true,
   },
   {
     siteId: 1,
@@ -103,7 +103,7 @@ export const OISIX_LIST: Osechi[] = [
     price: 48500,
     categories: ['和', '洋'],
     includeTax: false,
-    includePostage: true
+    includePostage: true,
   },
   {
     siteId: 1,
@@ -116,7 +116,7 @@ export const OISIX_LIST: Osechi[] = [
     price: 76800,
     categories: ['和', '洋'],
     includeTax: false,
-    includePostage: true
+    includePostage: true,
   },
   {
     siteId: 1,
@@ -129,7 +129,7 @@ export const OISIX_LIST: Osechi[] = [
     price: 16900,
     categories: ['和'],
     includeTax: false,
-    includePostage: true
+    includePostage: true,
   },
   {
     siteId: 1,
@@ -142,7 +142,7 @@ export const OISIX_LIST: Osechi[] = [
     price: 14000,
     categories: ['洋'],
     includeTax: false,
-    includePostage: true
+    includePostage: true,
   },
   {
     siteId: 1,
@@ -155,8 +155,8 @@ export const OISIX_LIST: Osechi[] = [
     price: 14000,
     categories: ['中'],
     includeTax: false,
-    includePostage: true
-  }
+    includePostage: true,
+  },
 ];
 
 export const GURU_LIST: Osechi[] = [
@@ -174,7 +174,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/itamae/131300/?push_page_id=0_17__special_season_osechi_japanese-style_&push_slot_id=CS-10&push_campaign_id=572&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -189,7 +189,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/kacyo/F-020/?push_page_id=0_17__special_season_osechi_japanese-style_&push_slot_id=CS-10&push_campaign_id=572&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -205,7 +205,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/itamae/234400/?push_page_id=0_17__special_season_osechi_japanese-style_&push_slot_id=CS-10&push_campaign_id=572&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -220,7 +220,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/kacyo/O-003/?push_page_id=0_17__special_season_osechi_japanese-style_&push_slot_id=CS-10&push_campaign_id=572&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -236,7 +236,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/worlddiner/2019takumi/?push_page_id=0_17__special_season_osechi_japanese-style_&push_slot_id=CS-10&push_campaign_id=572&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -251,7 +251,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/unoan/U-1/?push_page_id=0_17__special_season_osechi_japanese-style_&push_slot_id=CS-10&push_campaign_id=572&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -267,7 +267,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/itamae/131101/?push_page_id=0_17__special_season_osechi_japanese-style_&push_slot_id=CS-10&push_campaign_id=572&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -283,7 +283,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/itamae/534400/?push_page_id=0_17__special_season_osechi_japanese-style_&push_slot_id=CS-10&push_campaign_id=572&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -299,7 +299,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/itamae/251300/?push_page_id=0_17__special_season_osechi_japanese-style_&push_slot_id=CS-10&push_campaign_id=572&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -315,7 +315,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/itamae/121101/?push_page_id=0_17__special_season_osechi_japanese-style_&push_slot_id=CS-10&push_campaign_id=572&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -328,7 +328,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kacyo/F-020/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -341,7 +341,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kacyo/O-003/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -355,7 +355,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kacyo/F-029/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -368,7 +368,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/unoan/U-1/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -382,7 +382,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/worlddiner/2019kiwami/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -396,7 +396,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kinnoho/minion2019/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -409,7 +409,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/toriyone/T-2015-2/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -422,7 +422,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/uosu/OS-3_1/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -436,7 +436,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/worlddiner/2019takumi/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -450,7 +450,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/worlddiner/2019zei/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -464,7 +464,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/worlddiner/2019rakuten/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -478,7 +478,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/worlddiner/2019chitose/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -492,7 +492,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/worlddiner/2019eiju/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -505,7 +505,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/shojikiya/02714/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -518,7 +518,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/shojikiya/02710/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -531,7 +531,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/shojikiya/02713/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -544,7 +544,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/shojikiya/02712/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -558,7 +558,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/tofu-kirazu/ose002/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -572,7 +572,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/hanamiyako/osechi/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -586,7 +586,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/worlddiner/2019kissyou/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -599,7 +599,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/toriyone/T-2015-5/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -612,7 +612,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/ugenta/2019_01/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -626,7 +626,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/mentuyu/2018/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -639,7 +639,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/toriyone/T-2015-4/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -652,7 +652,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/toriyone/T-2015-1/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -665,7 +665,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/toriyone/T-2015-3/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -678,7 +678,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/uosu/wakamatu/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -692,7 +692,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/yamasaki/Y-1/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -706,7 +706,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/worlddiner/2019hishou/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -720,7 +720,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/tofu-kirazu/ose001/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -734,7 +734,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/tofu-kirazu/ose003/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -748,7 +748,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/worlddiner/2019sinshunmanpuku/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -761,7 +761,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/shojikiya/02711/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -775,7 +775,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/ugenta/2019_02/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -788,7 +788,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/ugenta/2019_03/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -801,7 +801,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/shojikiya/02709/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -815,7 +815,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/seiromushi-katsuura/osechi2019-mai/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -829,7 +829,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/seiromushi-katsuura/osechi2019-hana/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -843,7 +843,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kyoryori-sakayasu/Z-1/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -857,7 +857,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/seiromushi-katsuura/osechi2019-yume/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -871,7 +871,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/tonden/2018_01/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -885,7 +885,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/seiromushi-katsuura/osechi2019-miyabi/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -899,7 +899,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/201200/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -913,7 +913,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/goza/2018-osechi01/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -927,7 +927,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/monteroza/osechi2019/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -941,7 +941,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kinnoho/yamato2019/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -955,7 +955,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kinnoho/haru2019/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -969,7 +969,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kyoryori-sakayasu/Z-2_2011-8/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -982,7 +982,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kyoryori-sakayasu/Z-4/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -996,7 +996,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kyoryori-sakayasu/Z-0/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1010,7 +1010,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kinnoho/utage2019/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1024,7 +1024,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/201302/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1038,7 +1038,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/201301/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1052,7 +1052,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/201201/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1065,7 +1065,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/shunju/osechi-2019/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1079,7 +1079,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/202402/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1093,7 +1093,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/bimi-niigata/002_day/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1107,7 +1107,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/ransen/osechi-2019_3dan/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1121,7 +1121,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/ransen/osechi-2019_2dan/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1135,7 +1135,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kinnoho/oikawa2019/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1148,7 +1148,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/asakusa-funachu/2019_hanazen/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1162,7 +1162,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/201313/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1175,7 +1175,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/asakusa-funachu/2019_matsurizen/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1189,7 +1189,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/nishito/shofuku2019_01/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1202,7 +1202,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/asakusa-funachu/2019_mainozen/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1216,7 +1216,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/asakusa-funachu/2019_yumenozen/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1229,7 +1229,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/tonden/2018_02/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1242,7 +1242,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/m742800/2019_suzaku_osechi/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1255,7 +1255,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/tonden/2018_03/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1269,7 +1269,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kinnoho/keiga2019/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1283,7 +1283,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/nishito/akenoharu2019_01/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1297,7 +1297,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kinnoho/keiun2019/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1311,7 +1311,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kinnoho/aoi2019/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1325,7 +1325,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/131300/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1339,7 +1339,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/131101/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1353,7 +1353,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/121101/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1367,7 +1367,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/231300/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1381,7 +1381,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/234400/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1395,7 +1395,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/131302/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1409,7 +1409,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/261101/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1423,7 +1423,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/241101/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1437,7 +1437,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/334400/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1451,7 +1451,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/251300/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1465,7 +1465,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/271101/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1479,7 +1479,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/534400/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1493,7 +1493,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/251101/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1507,7 +1507,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/231303/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1521,7 +1521,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/121300/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1535,7 +1535,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/111301/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1549,7 +1549,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/311600/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1563,7 +1563,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/131150/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1577,7 +1577,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/111302/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1591,7 +1591,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/243202/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1605,7 +1605,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/121150/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1619,7 +1619,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/111303/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1633,7 +1633,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/115102/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1647,7 +1647,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/115103/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1661,7 +1661,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/itamae/241300/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1677,7 +1677,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/worlddiner/2019takumi/?push_page_id=0_17__special_season_osechi_western-style_&push_slot_id=CS-10&push_campaign_id=588&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1693,7 +1693,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/bistrot-gagnant/2018_2dan/?push_page_id=0_17__special_season_osechi_western-style_&push_slot_id=CS-10&push_campaign_id=588&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1709,7 +1709,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/worlddiner/2019kiwami/?push_page_id=0_17__special_season_osechi_western-style_&push_slot_id=CS-10&push_campaign_id=588&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1725,7 +1725,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/worlddiner/2019zei/?push_page_id=0_17__special_season_osechi_western-style_&push_slot_id=CS-10&push_campaign_id=588&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1741,7 +1741,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/Cerisier/2012-osechi01/?push_page_id=0_17__special_season_osechi_western-style_&push_slot_id=CS-10&push_campaign_id=588&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1757,7 +1757,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/ruruson/RO-1/?push_page_id=0_17__special_season_osechi_western-style_&push_slot_id=CS-10&push_campaign_id=588&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1773,7 +1773,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/worlddiner/2019rakuten/?push_page_id=0_17__special_season_osechi_western-style_&push_slot_id=CS-10&push_campaign_id=588&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1789,7 +1789,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/ailes/osechi2018-03/?push_page_id=0_17__special_season_osechi_western-style_&push_slot_id=CS-10&push_campaign_id=588&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1805,7 +1805,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/kinnoho/minion2019/?push_page_id=0_17__special_season_osechi_western-style_&push_slot_id=CS-10&push_campaign_id=588&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1821,7 +1821,7 @@ export const GURU_LIST: Osechi[] = [
     includePostage: true,
     url:
       'https://gurusuguri.com/shop/Cerisier/2012-osechi02/?push_page_id=0_17__special_season_osechi_western-style_&push_slot_id=CS-10&push_campaign_id=588&moduleclick=t',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1835,7 +1835,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/Cerisier/2012-osechi01/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1849,7 +1849,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/bistrot-gagnant/2018_2dan/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1863,7 +1863,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/ruruson/RO-1/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1877,7 +1877,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/Cerisier/2012-osechi02/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1891,7 +1891,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/ailes/osechi2018-03/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1904,7 +1904,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/bistrokamatsuda/osechi/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1918,7 +1918,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/chesapeake/2017osechi-2danzyu/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1932,7 +1932,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/francais-la-porte/osechi-1/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1946,7 +1946,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/laverita/osechi_2016/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1959,7 +1959,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/e904800/osechi/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1973,7 +1973,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/goza/2018-osechi02/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -1986,7 +1986,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/m742800/2019_massa_osechi/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -2000,7 +2000,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/lodorante/2019yo-2/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -2014,7 +2014,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/lodorante/2019yo-1/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -2028,7 +2028,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/aileblanche/osechi/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -2042,7 +2042,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/lodorante/2019yo-2-te/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -2056,7 +2056,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/lodorante/2019yo-1te/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -2069,7 +2069,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kiyouken/g201925000/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -2082,7 +2082,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/saiko-ro/osechi/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -2096,7 +2096,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kandatouen/2017-3dan/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -2109,7 +2109,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kiyouken/g201918000/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -2122,7 +2122,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/saiko-ro/osechi1/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -2136,7 +2136,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/m740200/001/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -2150,7 +2150,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/m740200/002/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -2164,7 +2164,7 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kandatouen/2017-2dan/',
-    catchCopy: ''
+    catchCopy: '',
   },
   {
     siteId: 2,
@@ -2177,8 +2177,8 @@ export const GURU_LIST: Osechi[] = [
     includeTax: true,
     includePostage: true,
     url: 'https://gurusuguri.com/shop/kiyouken/g201928800/',
-    catchCopy: ''
-  }
+    catchCopy: '',
+  },
 ];
 
 export const KIBUN_LIST: Osechi[] = [
@@ -2194,7 +2194,7 @@ export const KIBUN_LIST: Osechi[] = [
     categories: ['和'],
     includeTax: false,
     includePostage: true,
-    price: 16000
+    price: 16000,
   },
   {
     siteId: 3,
@@ -2208,7 +2208,7 @@ export const KIBUN_LIST: Osechi[] = [
     categories: ['和'],
     includeTax: false,
     includePostage: true,
-    price: 27500
+    price: 27500,
   },
   {
     siteId: 3,
@@ -2222,7 +2222,7 @@ export const KIBUN_LIST: Osechi[] = [
     categories: ['和'],
     includeTax: false,
     includePostage: true,
-    price: 24500
+    price: 24500,
   },
   {
     siteId: 3,
@@ -2236,7 +2236,7 @@ export const KIBUN_LIST: Osechi[] = [
     categories: ['和'],
     includeTax: false,
     includePostage: true,
-    price: 20000
+    price: 20000,
   },
   {
     siteId: 3,
@@ -2250,7 +2250,7 @@ export const KIBUN_LIST: Osechi[] = [
     categories: ['和'],
     includeTax: false,
     includePostage: true,
-    price: 13600
+    price: 13600,
   },
   {
     siteId: 3,
@@ -2263,7 +2263,7 @@ export const KIBUN_LIST: Osechi[] = [
     categories: ['和'],
     includeTax: false,
     includePostage: true,
-    price: 7500
+    price: 7500,
   },
   {
     siteId: 3,
@@ -2277,7 +2277,7 @@ export const KIBUN_LIST: Osechi[] = [
     categories: ['和'],
     includeTax: false,
     includePostage: true,
-    price: 10500
+    price: 10500,
   },
   {
     siteId: 3,
@@ -2291,7 +2291,7 @@ export const KIBUN_LIST: Osechi[] = [
     categories: ['和'],
     includeTax: false,
     includePostage: true,
-    price: 20000
+    price: 20000,
   },
   {
     siteId: 3,
@@ -2305,7 +2305,7 @@ export const KIBUN_LIST: Osechi[] = [
     categories: ['和', '洋'],
     includeTax: false,
     includePostage: true,
-    price: 11000
+    price: 11000,
   },
   {
     siteId: 3,
@@ -2319,7 +2319,7 @@ export const KIBUN_LIST: Osechi[] = [
     categories: ['和', '洋'],
     includeTax: false,
     includePostage: true,
-    price: 10000
+    price: 10000,
   },
   {
     siteId: 3,
@@ -2333,8 +2333,8 @@ export const KIBUN_LIST: Osechi[] = [
     categories: ['和'],
     includeTax: false,
     includePostage: true,
-    price: 7500
-  }
+    price: 7500,
+  },
 ];
 
 export const OSECHI_LIST = [...OISIX_LIST, ...GURU_LIST, ...KIBUN_LIST];

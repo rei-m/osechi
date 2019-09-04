@@ -4,7 +4,7 @@ import { Category, Osechi, SortCondition } from '@src/types';
 const osechiCollection: { [code: string]: Osechi } = OSECHI_LIST.reduce(
   (previous, current) => ({
     ...previous,
-    [`${current.siteId}_${current.code}`]: current
+    [`${current.siteId}_${current.code}`]: current,
   }),
   {}
 );
@@ -15,7 +15,7 @@ const categoryFilterMap: {
   ja: (categories: Category[]) => categories.indexOf('和') !== -1,
   we: (categories: Category[]) => categories.indexOf('洋') !== -1,
   ch: (categories: Category[]) => categories.indexOf('中') !== -1,
-  all: (_categories: Category[]) => true
+  all: (_categories: Category[]) => true,
 };
 
 const peopleRangeFilterMap: {
@@ -24,7 +24,7 @@ const peopleRangeFilterMap: {
   pe0: (_peopleFrom, _peopleTo) => true,
   pe1: (peopleFrom, peopleTo) => peopleFrom >= 1 && peopleTo <= 3,
   pe2: (peopleFrom, peopleTo) => peopleFrom >= 3 && peopleTo <= 4,
-  pe3: (peopleFrom, _peopleTo) => peopleFrom >= 5
+  pe3: (peopleFrom, _peopleTo) => peopleFrom >= 5,
 };
 
 const priceRangeFilterMap: {
@@ -35,7 +35,7 @@ const priceRangeFilterMap: {
   pr2: price => price >= 15000 && price <= 20000,
   pr3: price => price >= 20000 && price <= 25000,
   pr4: price => price >= 25000 && price <= 30000,
-  pr5: price => price >= 30000
+  pr5: price => price >= 30000,
 };
 
 const filterCreator = (
@@ -52,7 +52,7 @@ const filterCreator = (
     priceRangeFilter(price);
 };
 
-const priceLowComparator = (thisO: Osechi, thatO) => {
+const priceLowComparator = (thisO: Osechi, thatO: Osechi) => {
   if (thisO.price > thatO.price) {
     return 1;
   }
@@ -62,7 +62,7 @@ const priceLowComparator = (thisO: Osechi, thatO) => {
   return 0;
 };
 
-const priceHighComparator = (thisO: Osechi, thatO) => {
+const priceHighComparator = (thisO: Osechi, thatO: Osechi) => {
   if (thisO.price > thatO.price) {
     return -1;
   }
@@ -86,5 +86,5 @@ export const osechiStore = {
         ? priceLowComparator
         : priceHighComparator;
     return OSECHI_LIST.filter(osechi => filter(osechi)).sort(comparator);
-  }
+  },
 };

@@ -1,7 +1,0 @@
-[Settings]
-ID = "nervous-mclean-520e67"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
